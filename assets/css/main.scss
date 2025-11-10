@@ -1,126 +1,33 @@
-/*
- * Minimal Mistakes Jekyll Theme
- *
- * - Michael Rose
- * - mademistakes.com
- * - https://twitter.com/mmistakes
- *
- */
+@import
+    "vendor/breakpoint/breakpoint",
 
-// --- 1. 所有的 @import 语句都集中在顶部 ---
+    "themes",
+    "theme/{{ site.site_theme | default: 'default' | append: '_light' }}",
+    "theme/{{ site.site_theme | default: 'default' | append: '_dark' }}",
 
-// Vendor
-@import "vendor/breakpoint/breakpoint";
-@import "vendor/susy/susy";
-@import "vendor/font-awesome/fontawesome";
-@import "vendor/font-awesome/solid";
-@import "vendor/font-awesome/brands";
-@import "vendor/magnific-popup/magnific-popup";
+    "include/mixins",
+    "vendor/susy/susy",
 
-// Core
-@import "variables";
-@import "mixins";
-@import "reset";
-@import "base";
-@import "utilities";
-@import "animations";
-@import "tables";
-@import "buttons";
-@import "notices";
-@import "masthead";
-@import "navigation";
-@import "footer";
-@import "syntax";
-@import "forms";
-@import "page";
-@import "archive";
-@import "sidebar";
-@import "print";
+    "layout/reset",
+    "layout/base",
 
-// --- 2. 所有的自定义 CSS 规则都放在所有 @import 之后 ---
+    "include/utilities",
+    "layout/tables",
+    "layout/buttons",
+    "layout/notices",
+    "layout/masthead",
+    "layout/navigation",
+    "layout/footer",
+    "syntax",
 
-/* Publication 样式 */
-.publication {
-    color: #333; /* 更深的颜色 */
-}
-.publication-block {
-    background-color: #f0f8ff; /* 淡蓝色背景 */
-    padding: 20px;
-    margin-bottom: 20px;
-    border-radius: 8px;
-}
+    "layout/forms",
 
-/* Archive 样式覆盖 */
-.archive__item {
-    background-color: #ffffff; /* 白色背景 */
-    border: 1px solid #dddddd; /* 灰色边框 */
-    border-radius: 8px; /* 圆角边框 */
-    padding: 15px; /* 内边距 */
-    margin-bottom: 20px; /* 底部外边距 */
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    
-    /* 字体样式 (来自你后面的定义，合并到这里) */
-    font-family: 'Arial', sans-serif; /* 修改字体 */
-    font-size: 14px; /* 修改字体大小 */
-    color: #333333; /* 修改字体颜色 */
-}
+    "layout/page",
+    "layout/archive",
+    "layout/sidebar",
+    "layout/json_cv",
 
-/* 标题样式 */
-.archive__item-title {
-    font-family: 'Georgia', serif;
-    font-size: 16px;
-    color: #0056b3; /* 深蓝色 */
-}
-
-/* 摘要样式 */
-.archive__item-excerpt {
-    font-size: 12px;
-    color: #666666; /* 淡灰色 */
-}
-
-/* 链接样式 */
-.archive__item a {
-    color: #1a0dab; /* 蓝色链接 */
-}
-
-/* 图片描述样式 */
-.wordwrap {
-    font-family: 'Great Vibes', cursive; /* 设置花体字体 */
-    font-size: 14px;
-    color: #333333; 
-}
-
-/* === 自定义字体和大小覆盖 === */
-body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-    font-size: 17px;
-    line-height: 1.6;
-}
-
-h1, h2, h3, h4, h5, h6 {
-    font-family: inherit;
-    font-weight: bold;
-}
-
-/* === 主题切换变量 (Dark Mode) === */
-:root {
-    --bg-color: #ffffff;
-    --text-color: #111111;
-    --link-color: #1a0dab;
-}
-
-[data-theme="dark"] {
-    --bg-color: #1e1e1e;
-    --text-color: #eeeeee;
-    --link-color: #4ea1ff;
-}
-
-/* 应用主题变量 (合并你后面的 body 和 a 规则) */
-body {
-    background-color: var(--bg-color);
-    color: var(--text-color);
-}
-
-a {
-    color: var(--link-color);
-}
+    "vendor/font-awesome/fontawesome",
+    "vendor/font-awesome/solid",
+    "vendor/font-awesome/brands"
+;
