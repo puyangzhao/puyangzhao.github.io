@@ -11,8 +11,7 @@ redirect_from:
 # Puyang's Personal Website 🚀
 
 ## 🎓 Academic Journey
-- **Ph.D. student**, Biostatistics and Data Science, UT Health Science Center at Houston  
-- **M.Sc. in Mathematics and Statistics**, University of Melbourne
+- **Ph.D. Candidate**, Biostatistics and Data Science, UT Health Science Center at Houston  
 
 I am currently a Research Assistant (RA) at UTHealth, focusing on tobacco control research. My academic journey includes ongoing Ph.D. studies in Biostatistics and Data Science at the UT Health Science Center at Houston.
 
