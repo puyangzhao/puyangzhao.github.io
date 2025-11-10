@@ -31,9 +31,11 @@ My research interests span a wide range of areas in biostatistics and data scien
 
 ### 📝 Peer-Reviewed Journal Articles
 
-- Zhang H., **Zhao P.***, Tang G., Li Z., Yuan Z.  Reproducible and Generalizable Speech Emotion Recognition via an Intelligent Fusion Network. Biomedical Signal Processing and Control, May 2025.
-
 - **Zhao P.**, Yang J., Buu A.*  Applied Statistical Methods for Identifying Features of Heart Rate that Are Associated with Nicotine Vaping. The American Journal of Drug and Alcohol Abuse, Feb 2025.
+  
+- Zhang H., Pang Z., **Zhao P.**, Tang G., Shen L., Wang G. Pre-attentive speech signal processing with adaptive routing for emotion recognition. Biomedical Signal Processing and Control, 2025.
+  
+- Zhang H., **Zhao P.***, Tang G., Li Z., Yuan Z.  Reproducible and Generalizable Speech Emotion Recognition via an Intelligent Fusion Network. Biomedical Signal Processing and Control, May 2025.
 
 - Zhang H.*, Huang H., **Zhao P.**, Yu Z.  Sparse Temporal-Aware Capsule Network for Robust Speech Emotion Recognition. Engineering Applications of Artificial Intelligence, 2025.
 
