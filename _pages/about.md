@@ -13,8 +13,6 @@ redirect_from:
 ## 🎓 Academic Journey
 - **Ph.D. Candidate**, Biostatistics and Data Science, UT Health Science Center at Houston  
 
-I am currently a Research Assistant (RA) at UTHealth, focusing on tobacco control research. My academic journey includes ongoing Ph.D. studies in Biostatistics and Data Science at the UT Health Science Center at Houston.
-
 ## 🔬 Research Interests
 
 My research interests span a wide range of areas in biostatistics and data science, particularly applied to public health and tobacco control:
