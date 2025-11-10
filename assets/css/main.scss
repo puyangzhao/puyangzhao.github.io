@@ -42,6 +42,7 @@
     "vendor/font-awesome/solid",
     "vendor/font-awesome/brands"
 ;
+/* --- 自定义背景图 --- */
 body::before {
     content: '';
     position: absolute;
@@ -54,53 +55,54 @@ body::before {
     background-repeat: no-repeat;
     z-index: -1;
 }
+
+/* --- 自定义出版物样式块 --- */
 .publication {
-    color: #333; /* 更深的颜色 */
+    color: #333 !important; /* 更深的字体颜色，强制生效 */
 }
+
 .publication-block {
-    background-color: #f0f8ff; /* 淡蓝色背景 */
-    padding: 20px; /* 添加一些内边距使文本不会太贴近边缘 */
-    margin-bottom: 20px; /* 如果有多个块，每个块之间添加一些间隔 */
-    border-radius: 8px; /* 可选，为块添加圆角边框 */
+    background-color: #f0f8ff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
 }
+
+/* --- Archive 区块整体样式 --- */
 .archive__item {
-    background-color: #ffffff; /* 白色背景 */
-    border: 1px solid #dddddd; /* 灰色边框 */
-    border-radius: 8px; /* 圆角边框 */
-    padding: 15px; /* 内边距 */
-    margin-bottom: 20px; /* 底部外边距，保持出版物之间有间隔 */
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
+    background-color: #ffffff;
+    border: 1px solid #dddddd;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif !important;
+    font-size: 14px !important;
+    color: #333333 !important;
 }
 
-/* 修改整个 archive__item 区域的字体样式 */
-.archive__item {
-    font-family: 'Arial', sans-serif; /* 修改字体 */
-    font-size: 14px; /* 修改字体大小 */
-    color: #333333; /* 修改字体颜色 */
+/* --- 具体标题字体样式 --- */
+.archive__item .archive__item-title {
+    font-family: 'Georgia', serif !important;
+    font-size: 16px !important;
+    color: #0056b3 !important; /* 深蓝色标题 */
 }
 
-/* 特别修改标题的样式 */
-.archive__item-title {
-    font-family: 'Georgia', serif;
-    font-size: 16px;
-    color: #0056b3; /* 深蓝色 */
+/* --- 摘要样式 --- */
+.archive__item .archive__item-excerpt {
+    font-size: 12px !important;
+    color: #666666 !important; /* 淡灰色摘要 */
 }
 
-/* 修改摘要的字体和颜色 */
-.archive__item-excerpt {
-    font-size: 12px;
-    color: #666666; /* 淡灰色 */
-}
-
-/* 修改链接颜色 */
+/* --- 链接颜色样式 --- */
 .archive__item a {
-    color: #1a0dab; /* 蓝色链接 */
+    color: #1a0dab !important; /* 蓝色链接 */
 }
 
-/* 修改图片描述文本的样式 */
+/* --- 图片描述样式 --- */
 .wordwrap {
-    font-family: 'Great Vibes', cursive; /* 设置花体字体 */
-    font-size: 14px;
-    color: #333333; 
+    font-family: 'Great Vibes', cursive !important;
+    font-size: 14px !important;
+    color: #333333 !important;
 }
 
