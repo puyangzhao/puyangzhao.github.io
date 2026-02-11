@@ -3,7 +3,7 @@ title: "Pre-attentive speech signal processing with adaptive routing for emotion
 collection: publications
 permalink: /publication/Pre-attentive
 excerpt: 'This paper reviews how such processing influences perception of color, shape, and motion, which are crucial for intuitive data visualization and interface design. Understanding these mechanisms helps researchers and designers create displays that align with natural human cognition.'
-date: 2025
+date: Jan 2026
 venue: 'Biomedical Signal Processing and Control '
 type: "Journal"
 paperurl: 'https://www.sciencedirect.com/science/article/abs/pii/S1746809425012935'
