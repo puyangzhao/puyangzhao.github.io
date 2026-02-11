@@ -11,7 +11,7 @@ redirect_from:
 # Puyang's Personal Website 🚀
 
 ## 🎓 Academic Journey
-- **Ph.D. Candidate**, Biostatistics and Data Science, UT Health Science Center at Houston  
+I am currently a Postdoctoral Associate at Rice University, working with Dr. Hanjie Chen. I earned my Ph.D. in Biostatistics from UTHealth Houston, under the supervision of Dr. James Yang, Dr. Anne Buu, and Dr. Theresa Tran. I received my M.Sc. in Mathematics and Statistics from the University of Melbourne (supervised by Dr. Howard Bondell), and my B.Sc. in Statistics from Hong Kong Baptist University (supervised by Dr. Jingjing Wu).
 
 ## 🔬 Research Interests
 
