@@ -63,14 +63,14 @@ Feel free to reach out if you're interested in collaborating or have any questio
 </div>
 
 <div style="white-space: nowrap; overflow-x: auto; margin-top: 20px;">
-  <!-- <img src="images/tianjin.jpg" alt="Tianjin" style="height:80px; width:100px; display: inline-block;"> -->
+  <img src="images/tianjin.jpg" alt="Tianjin" style="height:80px; width:100px; display: inline-block;">
   <img src="images/uth.png" alt="UTH" style="height:80px; width:100px; display: inline-block;">
-  <img src="images/uth2.jpg" alt="UTH2" style="height:80px; width:100px; display: inline-block;">
+  <img src="images/uth2.jpg" alt="UTH2" style="height:80px; width:130px; display: inline-block;">
   <img src="images/melb.jpg" alt="Melbourne" style="height:80px; width:100px; display: inline-block;">
   <img src="images/uic.jpg" alt="UIC" style="height:80px; width:100px; display: inline-block;">
   <img src="images/stat.jpg" alt="Statistics" style="height:80px; width:100px; display: inline-block;">
   <img src="images/hkbu.png" alt="HKBU" style="height:80px; width:100px; display: inline-block;">
-  <img src="images/rice.png" alt="Rice" style="height:80px; width:100px; display: inline-block;">
+  <img src="images/rice.png" alt="Rice" style="height:80px; width:130px; display: inline-block;">
 </div>
 ---
 
