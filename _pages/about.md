@@ -62,15 +62,16 @@ Feel free to reach out if you're interested in collaborating or have any questio
   <script type="text/javascript" id="clstr_globe" src="//clustrmaps.com/globe.js?d=clIdEPFSxTObYL5YCT6KPfejmqi13_-8ETks5Uwv8eQ"></script>
 </div>
 
-<img src="images/tianjin.jpg" alt="Tianjin" style="height:80px; width:100px;">
-<img src="images/uth.png" alt="UTH" style="height:80px; width:100px;">
-<img src="images/uth2.jpg" alt="UTH2" style="height:80px; width:100px;">
-<img src="images/melb.jpg" alt="Melbourne" style="height:80px; width:100px;">
-<img src="images/uic.jpg" alt="UIC" style="height:80px; width:100px;">
-<img src="images/stat.jpg" alt="Statistics" style="height:80px; width:100px;">
-<img src="images/hkbu.png" alt="HKBU" style="height:80px; width:100px;">
-<img src="images/rice.png" alt="Rice" style="height:80px; width:100px;">
-
+<div style="white-space: nowrap; overflow-x: auto; margin-top: 20px;">
+  <!-- <img src="images/tianjin.jpg" alt="Tianjin" style="height:80px; width:100px; display: inline-block;"> -->
+  <img src="images/uth.png" alt="UTH" style="height:80px; width:100px; display: inline-block;">
+  <img src="images/uth2.jpg" alt="UTH2" style="height:80px; width:100px; display: inline-block;">
+  <img src="images/melb.jpg" alt="Melbourne" style="height:80px; width:100px; display: inline-block;">
+  <img src="images/uic.jpg" alt="UIC" style="height:80px; width:100px; display: inline-block;">
+  <img src="images/stat.jpg" alt="Statistics" style="height:80px; width:100px; display: inline-block;">
+  <img src="images/hkbu.png" alt="HKBU" style="height:80px; width:100px; display: inline-block;">
+  <img src="images/rice.png" alt="Rice" style="height:80px; width:100px; display: inline-block;">
+</div>
 ---
 
 *Last updated: November 2025*
