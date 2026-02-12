@@ -70,7 +70,7 @@ Feel free to reach out if you're interested in collaborating or have any questio
   <img src="images/uic.jpg" alt="UIC" style="height:80px; width:100px; display: inline-block;">
   <img src="images/stat.jpg" alt="Statistics" style="height:80px; width:100px; display: inline-block;">
   <img src="images/hkbu.png" alt="HKBU" style="height:80px; width:100px; display: inline-block;">
-  <img src="images/rice.png" alt="Rice" style="height:80px; width:130px; display: inline-block;">
+  <img src="images/rice.png" alt="Rice" style="height:80px; width:160px; display: inline-block;">
 </div>
 ---
 
