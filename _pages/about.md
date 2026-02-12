@@ -63,7 +63,7 @@ Feel free to reach out if you're interested in collaborating or have any questio
 </div>
 
 <img src="images/tianjin.jpg" alt="Tianjin" style="height:80px; width:100px;">
-<img src="images/uth.png" alt="UTH" style="height:80px; width:130px;">
+<img src="images/uth.png" alt="UTH" style="height:80px; width:100px;">
 <img src="images/uth2.jpg" alt="UTH2" style="height:80px; width:100px;">
 <img src="images/melb.jpg" alt="Melbourne" style="height:80px; width:100px;">
 <img src="images/uic.jpg" alt="UIC" style="height:80px; width:100px;">
