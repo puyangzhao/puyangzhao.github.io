@@ -54,7 +54,7 @@ My research interests span a wide range of areas in biostatistics and data scien
 
 Feel free to reach out if you're interested in collaborating or have any questions about my research:
 
-📧 Email: [Puyang.Zhao@uth.tmc.edu](mailto:Puyang.Zhao@uth.tmc.edu)
+📧 Email: [Puyang.Zhao@rice.edu](mailto:Puyang.Zhao@rice.edu)
 
 ---
 
@@ -69,6 +69,7 @@ Feel free to reach out if you're interested in collaborating or have any questio
 <img src="images/uic.jpg" alt="UIC" style="height:80px; width:100px;">
 <img src="images/stat.jpg" alt="Statistics" style="height:80px; width:100px;">
 <img src="images/hkbu.png" alt="HKBU" style="height:80px; width:100px;">
+<img src="images/rice.png" alt="Rice" style="height:80px; width:100px;">
 
 ---
 
