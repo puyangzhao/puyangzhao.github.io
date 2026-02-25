@@ -9,315 +9,634 @@ redirect_from:
 ---
 
 <style>
-.about-bio {
-  font-size: 1.05em;
-  line-height: 1.9;
-  color: #333;
-  margin-bottom: 2em;
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap');
+
+/* ── BASE ── */
+.page__content { font-family: 'Nunito', sans-serif; }
+
+/* ── HERO BANNER ── */
+.hero-banner {
+  background: linear-gradient(135deg, #fdf6ee 0%, #fce8d5 50%, #f9ddd0 100%);
+  border-radius: 20px;
+  padding: 2.8em 2.5em 2.2em;
+  margin-bottom: 2.5em;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 24px rgba(200,120,80,0.08);
+  animation: fadeSlideDown 0.7s ease both;
 }
 
+.hero-banner::before {
+  content: '';
+  position: absolute;
+  top: -60px; right: -60px;
+  width: 220px; height: 220px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(220,140,100,0.18) 0%, transparent 70%);
+}
+
+.hero-banner::after {
+  content: '';
+  position: absolute;
+  bottom: -40px; left: 30%;
+  width: 160px; height: 160px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(240,180,130,0.15) 0%, transparent 70%);
+}
+
+.hero-greeting {
+  font-family: 'Lora', serif;
+  font-size: 2.2em;
+  font-weight: 600;
+  color: #3d2b1f;
+  margin: 0 0 0.3em 0;
+  line-height: 1.2;
+}
+
+.hero-greeting span {
+  color: #c0613a;
+}
+
+.hero-subtitle {
+  font-size: 0.95em;
+  color: #7a5c4e;
+  margin: 0 0 1.2em 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  flex-wrap: wrap;
+}
+
+.hero-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background: rgba(255,255,255,0.7);
+  border: 1px solid rgba(192,97,58,0.2);
+  border-radius: 20px;
+  padding: 3px 12px;
+  font-size: 0.85em;
+  color: #7a5c4e;
+  backdrop-filter: blur(4px);
+}
+
+.hero-bio {
+  font-size: 0.97em;
+  line-height: 1.9;
+  color: #4a3528;
+  max-width: 680px;
+  margin: 0;
+  position: relative;
+  z-index: 1;
+}
+
+/* ── SECTION TITLES ── */
+.warm-section-title {
+  font-family: 'Lora', serif;
+  font-size: 1.35em;
+  font-weight: 600;
+  color: #3d2b1f;
+  margin: 2.2em 0 1em 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.warm-section-title::after {
+  content: '';
+  flex: 1;
+  height: 2px;
+  background: linear-gradient(to right, rgba(192,97,58,0.35), transparent);
+  border-radius: 2px;
+  margin-left: 6px;
+}
+
+/* ── RESEARCH CARDS ── */
 .research-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
   gap: 14px;
-  margin: 1.5em 0 2em 0;
+  margin-bottom: 0.5em;
 }
 
-.research-card {
-  background: #f9f7f4;
-  border-left: 3px solid #c0392b;
-  padding: 14px 16px;
-  border-radius: 4px;
-  font-size: 0.92em;
-  line-height: 1.6;
+.r-card {
+  background: #fff;
+  border-radius: 14px;
+  padding: 18px 16px;
+  border: 1.5px solid #f0e0d4;
+  box-shadow: 0 2px 10px rgba(200,120,80,0.06);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  opacity: 0;
+  transform: translateY(20px);
+  cursor: default;
 }
 
-.research-card strong {
+.r-card.visible {
+  animation: cardIn 0.5s ease both;
+}
+
+.r-card:hover {
+  transform: translateY(-4px) scale(1.01);
+  box-shadow: 0 8px 24px rgba(192,97,58,0.13);
+  border-color: #e0a888;
+}
+
+.r-card-icon {
+  font-size: 1.6em;
+  margin-bottom: 8px;
   display: block;
-  color: #c0392b;
-  margin-bottom: 4px;
-  font-size: 0.95em;
 }
 
-.pub-item {
-  padding: 16px 0;
-  border-bottom: 1px solid #eee;
-  display: flex;
-  gap: 16px;
-  align-items: flex-start;
+.r-card-title {
+  font-weight: 700;
+  font-size: 0.88em;
+  color: #c0613a;
+  margin-bottom: 5px;
 }
 
-.pub-year {
-  font-family: monospace;
-  font-size: 0.8em;
-  color: #999;
-  min-width: 36px;
-  padding-top: 3px;
-}
-
-.pub-content .pub-title {
-  font-weight: 600;
-  color: #1a1a1a;
-  margin-bottom: 4px;
-  font-size: 0.97em;
-}
-
-.pub-content .pub-authors {
-  font-size: 0.85em;
-  color: #666;
-  margin-bottom: 3px;
-}
-
-.pub-content .pub-venue {
+.r-card-desc {
   font-size: 0.82em;
-  color: #888;
-  font-style: italic;
+  color: #7a6055;
+  line-height: 1.65;
 }
 
-.pub-badge {
-  display: inline-block;
-  font-size: 0.7em;
-  padding: 2px 8px;
-  border-radius: 20px;
-  font-weight: 500;
-  margin-left: 6px;
-  vertical-align: middle;
-}
-.badge-j { background: #e8f5e9; color: #2e7d32; }
-.badge-c { background: #e3f2fd; color: #1565c0; }
-.badge-best { background: #fff8e1; color: #e65100; }
-
+/* ── EDUCATION TIMELINE ── */
 .edu-timeline {
-  border-left: 2px solid #c0392b;
-  padding-left: 24px;
-  margin: 1.5em 0;
+  position: relative;
+  padding-left: 28px;
+  margin: 0.5em 0 1em;
+}
+
+.edu-timeline::before {
+  content: '';
+  position: absolute;
+  left: 8px; top: 8px; bottom: 8px;
+  width: 2px;
+  background: linear-gradient(to bottom, #c0613a, #f0c8b0);
+  border-radius: 2px;
 }
 
 .edu-item {
-  margin-bottom: 1.8em;
   position: relative;
+  margin-bottom: 1.6em;
+  background: #fff;
+  border-radius: 14px;
+  padding: 14px 18px;
+  border: 1.5px solid #f0e0d4;
+  box-shadow: 0 2px 8px rgba(200,120,80,0.05);
+  transition: box-shadow 0.25s, transform 0.25s;
+  opacity: 0;
+  transform: translateX(-16px);
+}
+
+.edu-item.visible {
+  animation: slideRight 0.5s ease both;
+}
+
+.edu-item:hover {
+  box-shadow: 0 6px 20px rgba(192,97,58,0.1);
+  transform: translateX(4px);
 }
 
 .edu-item::before {
   content: '';
-  width: 10px; height: 10px;
-  background: #c0392b;
-  border-radius: 50%;
   position: absolute;
-  left: -30px; top: 5px;
+  left: -23px; top: 18px;
+  width: 12px; height: 12px;
+  border-radius: 50%;
+  background: #c0613a;
+  border: 3px solid #fdf6ee;
+  box-shadow: 0 0 0 2px #c0613a;
 }
 
-.edu-item .edu-degree {
+.edu-degree { font-weight: 700; color: #3d2b1f; font-size: 0.97em; }
+.edu-school { color: #7a5c4e; font-size: 0.88em; margin-top: 2px; }
+.edu-advisor { color: #a08070; font-size: 0.82em; font-style: italic; margin-top: 2px; }
+.edu-period {
+  display: inline-block;
+  background: #fdf0e8;
+  color: #c0613a;
+  font-size: 0.75em;
   font-weight: 700;
-  font-size: 1em;
-  color: #1a1a1a;
+  padding: 2px 10px;
+  border-radius: 20px;
+  margin-bottom: 6px;
+  letter-spacing: 0.04em;
 }
 
-.edu-item .edu-school {
-  font-size: 0.9em;
-  color: #555;
-  margin-top: 2px;
+/* ── PUBLICATIONS ── */
+.pub-tabs {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 1.2em;
+  flex-wrap: wrap;
 }
 
-.edu-item .edu-advisor {
+.pub-tab {
+  padding: 6px 18px;
+  border-radius: 20px;
+  border: 1.5px solid #e0c8bc;
+  background: transparent;
+  font-family: 'Nunito', sans-serif;
   font-size: 0.82em;
-  color: #888;
+  font-weight: 700;
+  color: #a08070;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.pub-tab.active, .pub-tab:hover {
+  background: #c0613a;
+  border-color: #c0613a;
+  color: white;
+  box-shadow: 0 3px 10px rgba(192,97,58,0.25);
+  transform: translateY(-1px);
+}
+
+.pub-card {
+  background: #fff;
+  border-radius: 14px;
+  padding: 16px 20px;
+  margin-bottom: 10px;
+  border: 1.5px solid #f0e0d4;
+  box-shadow: 0 2px 8px rgba(200,120,80,0.05);
+  display: grid;
+  grid-template-columns: 42px 1fr auto;
+  gap: 14px;
+  align-items: start;
+  transition: transform 0.2s, box-shadow 0.2s;
+  opacity: 0;
+  transform: translateY(12px);
+}
+
+.pub-card.visible { animation: cardIn 0.45s ease both; }
+
+.pub-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(192,97,58,0.1);
+}
+
+.pub-yr {
+  font-size: 0.75em;
+  font-weight: 700;
+  color: #c0613a;
+  background: #fdf0e8;
+  border-radius: 8px;
+  padding: 4px 6px;
+  text-align: center;
+  line-height: 1.3;
+}
+
+.pub-t { font-weight: 700; font-size: 0.93em; color: #3d2b1f; margin-bottom: 4px; line-height: 1.45; }
+.pub-a { font-size: 0.82em; color: #9a7060; margin-bottom: 3px; }
+.pub-a b { color: #c0613a; }
+.pub-v { font-size: 0.8em; color: #b09080; font-style: italic; }
+
+.pub-badge {
+  font-size: 0.68em;
+  font-weight: 700;
+  padding: 3px 9px;
+  border-radius: 20px;
+  white-space: nowrap;
+  align-self: flex-start;
+  letter-spacing: 0.04em;
+}
+.bj { background: #e8f5e9; color: #2e7d32; border: 1px solid #c8e6c9; }
+.bc { background: #e3f2fd; color: #1565c0; border: 1px solid #bbdefb; }
+.bb { background: #fff8e1; color: #e65100; border: 1px solid #ffe082; }
+
+/* ── CONTACT ── */
+.contact-box {
+  background: linear-gradient(135deg, #fdf6ee 0%, #fce8d5 100%);
+  border-radius: 18px;
+  padding: 2em 2.2em;
+  border: 1.5px solid #f0d4c0;
+  box-shadow: 0 4px 20px rgba(200,120,80,0.08);
+  display: flex;
+  align-items: center;
+  gap: 2em;
+  flex-wrap: wrap;
+  margin-top: 0.5em;
+}
+
+.contact-text-area { flex: 1; min-width: 200px; }
+.contact-tagline {
+  font-family: 'Lora', serif;
+  font-size: 1.2em;
+  color: #3d2b1f;
+  margin: 0 0 0.6em;
   font-style: italic;
 }
 
-.section-title-custom {
-  font-size: 1.5em;
-  font-weight: 700;
-  color: #1a1a1a;
-  margin: 2em 0 0.8em 0;
-  padding-bottom: 8px;
-  border-bottom: 2px solid #c0392b;
-  display: flex;
+.contact-email-link {
+  display: inline-flex;
   align-items: center;
   gap: 8px;
+  background: #c0613a;
+  color: white !important;
+  padding: 10px 22px;
+  border-radius: 25px;
+  font-size: 0.9em;
+  font-weight: 700;
+  text-decoration: none !important;
+  box-shadow: 0 4px 14px rgba(192,97,58,0.3);
+  transition: transform 0.2s, box-shadow 0.2s;
 }
 
+.contact-email-link:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(192,97,58,0.4);
+}
+
+.social-links { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 1em; }
+
+.s-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 6px 14px;
+  border-radius: 20px;
+  border: 1.5px solid #e0c8bc;
+  background: white;
+  font-size: 0.78em;
+  font-weight: 600;
+  color: #7a5c4e;
+  text-decoration: none !important;
+  transition: all 0.2s ease;
+}
+
+.s-link:hover {
+  background: #c0613a;
+  color: white !important;
+  border-color: #c0613a;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(192,97,58,0.2);
+}
+
+/* ── PHOTO STRIP ── */
 .photo-strip {
   display: flex;
-  gap: 8px;
+  gap: 10px;
   overflow-x: auto;
-  margin: 1.5em 0;
-  padding-bottom: 4px;
+  margin: 1.5em 0 0.5em;
+  padding-bottom: 6px;
+  scrollbar-width: thin;
+  scrollbar-color: #e0c8bc transparent;
 }
 
 .photo-strip img {
-  height: 80px;
-  border-radius: 4px;
+  height: 72px;
+  border-radius: 10px;
   object-fit: cover;
   flex-shrink: 0;
+  transition: transform 0.2s, box-shadow 0.2s;
+  border: 2px solid #f0e0d4;
 }
+
+.photo-strip img:hover {
+  transform: scale(1.08) translateY(-3px);
+  box-shadow: 0 6px 16px rgba(192,97,58,0.18);
+}
+
+/* ── GLOBE ── */
+.globe-wrap {
+  display: flex;
+  justify-content: flex-start;
+  margin: 1.5em 0 0.5em;
+}
+
+/* ── ANIMATIONS ── */
+@keyframes fadeSlideDown {
+  from { opacity: 0; transform: translateY(-18px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes cardIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideRight {
+  from { opacity: 0; transform: translateX(-16px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+.stagger-1 { animation-delay: 0.05s; }
+.stagger-2 { animation-delay: 0.12s; }
+.stagger-3 { animation-delay: 0.19s; }
+.stagger-4 { animation-delay: 0.26s; }
+.stagger-5 { animation-delay: 0.33s; }
+.stagger-6 { animation-delay: 0.40s; }
 </style>
 
-<div class="about-bio">
-I am currently a <strong>Postdoctoral Associate</strong> at Rice University, working with Dr. Hanjie Chen. I earned my Ph.D. in Biostatistics from UTHealth Houston, under the supervision of Dr. James Yang, Dr. Anne Buu, and Dr. Theresa Tran. I received my M.Sc. in Mathematics and Statistics from the University of Melbourne (supervised by Dr. Howard Bondell), and my B.Sc. in Statistics from Hong Kong Baptist University (supervised by Dr. Jingjing Wu).
+<!-- ═══ HERO ═══ -->
+<div class="hero-banner">
+  <div class="hero-greeting">Hi, I'm <span>Puyang</span> 👋</div>
+  <div class="hero-subtitle">
+    <span class="hero-pill">🎓 Postdoctoral Associate</span>
+    <span class="hero-pill">🏛 Rice University</span>
+    <span class="hero-pill">📍 Houston, TX</span>
+    <span class="hero-pill">she/her</span>
+  </div>
+  <p class="hero-bio">
+    I work at the intersection of <strong>biostatistics</strong>, <strong>machine learning</strong>, and clinical applications. My Ph.D. is from UTHealth Houston (advisors: Dr. James Yang, Dr. Anne Buu, Dr. Theresa Tran). Before that, M.Sc. from the University of Melbourne and B.Sc. from Hong Kong Baptist University. Currently at Rice working with Dr. Hanjie Chen on wearable analytics, continuous glucose monitoring, and more.
+  </p>
 </div>
 
----
+<!-- ═══ RESEARCH INTERESTS ═══ -->
+<div class="warm-section-title">🔬 Research Interests</div>
 
-<div class="section-title-custom">🔬 Research Interests</div>
-
-<div class="research-grid">
-  <div class="research-card">
-    <strong>⌚ Wearable Devices</strong>
-    Analysis of physiological signals from wearables, including heart rate monitoring in relation to nicotine vaping events.
+<div class="research-grid" id="researchGrid">
+  <div class="r-card">
+    <span class="r-card-icon">⌚</span>
+    <div class="r-card-title">Wearable Devices</div>
+    <div class="r-card-desc">Physiological signal analysis, heart rate monitoring in relation to nicotine vaping events.</div>
   </div>
-  <div class="research-card">
-    <strong>🗣 Speech Emotion Recognition</strong>
-    Deep learning architectures (capsule networks, fusion models) for emotion recognition in clinical applications.
+  <div class="r-card">
+    <span class="r-card-icon">🗣</span>
+    <div class="r-card-title">Speech Emotion Recognition</div>
+    <div class="r-card-desc">Capsule networks & fusion models for robust emotion recognition in clinical settings.</div>
   </div>
-  <div class="research-card">
-    <strong>📊 Longitudinal & EMA Data</strong>
-    Statistical methods for ecological momentary assessment and repeated-measures data in behavioral health.
+  <div class="r-card">
+    <span class="r-card-icon">📊</span>
+    <div class="r-card-title">Longitudinal & EMA Data</div>
+    <div class="r-card-desc">Statistical methods for ecological momentary assessment in behavioral health research.</div>
   </div>
-  <div class="research-card">
-    <strong>🩺 Clinical Machine Learning</strong>
-    GAN-based methods, federated learning, and deep learning for clinical datasets and diabetes classification.
+  <div class="r-card">
+    <span class="r-card-icon">🩺</span>
+    <div class="r-card-title">Clinical Machine Learning</div>
+    <div class="r-card-desc">GAN-based methods, federated learning, and deep learning for diabetes classification.</div>
   </div>
-  <div class="research-card">
-    <strong>🌿 Environmental Modeling</strong>
-    dPL-SPARROW framework combining neural networks with watershed models for nitrogen analysis.
+  <div class="r-card">
+    <span class="r-card-icon">🌿</span>
+    <div class="r-card-title">Environmental Modeling</div>
+    <div class="r-card-desc">dPL-SPARROW framework combining neural networks with watershed models.</div>
   </div>
-  <div class="research-card">
-    <strong>🚬 Tobacco & E-cigarette</strong>
-    Multidisciplinary research on vaping behaviors and tobacco control in public health.
+  <div class="r-card">
+    <span class="r-card-icon">🚬</span>
+    <div class="r-card-title">Tobacco & E-cigarette</div>
+    <div class="r-card-desc">Vaping behavior patterns and tobacco control in public health research.</div>
   </div>
 </div>
 
----
+<!-- ═══ EDUCATION ═══ -->
+<div class="warm-section-title">🎓 Education</div>
 
-<div class="section-title-custom">🎓 Education</div>
-
-<div class="edu-timeline">
+<div class="edu-timeline" id="eduTimeline">
   <div class="edu-item">
+    <span class="edu-period">2026 – Present</span>
     <div class="edu-degree">Postdoctoral Associate</div>
-    <div class="edu-school">Rice University, Houston, TX &nbsp;·&nbsp; 2024–Present</div>
+    <div class="edu-school">Rice University, Houston, TX</div>
     <div class="edu-advisor">Advisor: Dr. Hanjie Chen</div>
   </div>
   <div class="edu-item">
-    <div class="edu-degree">Ph.D. in Biostatistics</div>
+    <span class="edu-period">Ph.D.</span>
+    <div class="edu-degree">Biostatistics</div>
     <div class="edu-school">UTHealth Houston</div>
-    <div class="edu-advisor">Advisors: Dr. James Yang, Dr. Anne Buu, Dr. Theresa Tran</div>
+    <div class="edu-advisor">Advisors: Dr. James Yang · Dr. Anne Buu · Dr. Theresa Tran</div>
   </div>
   <div class="edu-item">
-    <div class="edu-degree">M.Sc. in Mathematics and Statistics</div>
+    <span class="edu-period">M.Sc.</span>
+    <div class="edu-degree">Mathematics and Statistics</div>
     <div class="edu-school">University of Melbourne, Australia</div>
     <div class="edu-advisor">Advisor: Dr. Howard Bondell</div>
   </div>
   <div class="edu-item">
-    <div class="edu-degree">B.Sc. in Statistics</div>
+    <span class="edu-period">B.Sc.</span>
+    <div class="edu-degree">Statistics</div>
     <div class="edu-school">Hong Kong Baptist University</div>
     <div class="edu-advisor">Advisor: Dr. Jingjing Wu</div>
   </div>
 </div>
 
----
+<!-- ═══ PUBLICATIONS ═══ -->
+<div class="warm-section-title">📚 Publications</div>
 
-<div class="section-title-custom">📚 Publications</div>
+<div class="pub-tabs">
+  <button class="pub-tab active" onclick="filterPubs('all', this)">All</button>
+  <button class="pub-tab" onclick="filterPubs('j', this)">Journal Articles</button>
+  <button class="pub-tab" onclick="filterPubs('c', this)">Conference</button>
+</div>
 
-**Journal Articles**
+<div id="pubContainer">
 
-<div class="pub-item">
-  <span class="pub-year">2025</span>
-  <div class="pub-content">
-    <div class="pub-title">Applied Statistical Methods for Identifying Features of Heart Rate Associated with Nicotine Vaping <span class="pub-badge badge-j">Journal</span></div>
-    <div class="pub-authors"><strong>Zhao P.</strong>, Yang J., Buu A.</div>
-    <div class="pub-venue">The American Journal of Drug and Alcohol Abuse, Feb 2025</div>
+  <div class="pub-card stagger-1" data-type="j">
+    <div class="pub-yr">2025</div>
+    <div>
+      <div class="pub-t">Applied Statistical Methods for Identifying Features of Heart Rate Associated with Nicotine Vaping</div>
+      <div class="pub-a"><b>Zhao P.</b>, Yang J., Buu A.</div>
+      <div class="pub-v">The American Journal of Drug and Alcohol Abuse, Feb 2025</div>
+    </div>
+    <span class="pub-badge bj">Journal</span>
+  </div>
+
+  <div class="pub-card stagger-2" data-type="j">
+    <div class="pub-yr">2025</div>
+    <div>
+      <div class="pub-t">Reproducible and Generalizable Speech Emotion Recognition via an Intelligent Fusion Network</div>
+      <div class="pub-a">Zhang H., <b>Zhao P.*</b>, Tang G., Li Z., Yuan Z.</div>
+      <div class="pub-v">Biomedical Signal Processing and Control, May 2025</div>
+    </div>
+    <span class="pub-badge bj">Journal</span>
+  </div>
+
+  <div class="pub-card stagger-3" data-type="j">
+    <div class="pub-yr">2025</div>
+    <div>
+      <div class="pub-t">Pre-attentive Speech Signal Processing with Adaptive Routing for Emotion Recognition</div>
+      <div class="pub-a">Zhang H., Pang Z., <b>Zhao P.</b>, Tang G., Shen L., Wang G.</div>
+      <div class="pub-v">Biomedical Signal Processing and Control, 2025</div>
+    </div>
+    <span class="pub-badge bj">Journal</span>
+  </div>
+
+  <div class="pub-card stagger-4" data-type="j">
+    <div class="pub-yr">2025</div>
+    <div>
+      <div class="pub-t">Sparse Temporal-Aware Capsule Network for Robust Speech Emotion Recognition</div>
+      <div class="pub-a">Zhang H.*, Huang H., <b>Zhao P.</b>, Yu Z.</div>
+      <div class="pub-v">Engineering Applications of Artificial Intelligence, 2025</div>
+    </div>
+    <span class="pub-badge bj">Journal</span>
+  </div>
+
+  <div class="pub-card stagger-5" data-type="j">
+    <div class="pub-yr">2024</div>
+    <div>
+      <div class="pub-t">CENN: Capsule-Enhanced Neural Network with Innovative Metrics for Robust Speech Emotion Recognition</div>
+      <div class="pub-a">Zhang H.*, Huang H., <b>Zhao P.</b>, Zhu X., Yu Z.</div>
+      <div class="pub-v">Knowledge-Based Systems, Sep 2024</div>
+    </div>
+    <span class="pub-badge bj">Journal</span>
+  </div>
+
+  <div class="pub-card stagger-6" data-type="j">
+    <div class="pub-yr">2024</div>
+    <div>
+      <div class="pub-t">DiGAN Breakthrough: Advancing Diabetic Data Analysis with Innovative GAN-Based Imbalance Correction</div>
+      <div class="pub-a"><b>Zhao P.</b>, Liu X., Yue Z., Zhao Q., Liu X., Deng Y., Wu J.*</div>
+      <div class="pub-v">Computer Methods and Programs in Biomedicine Update, 2024</div>
+    </div>
+    <span class="pub-badge bj">Journal</span>
+  </div>
+
+  <div class="pub-card stagger-1" data-type="c">
+    <div class="pub-yr">2025</div>
+    <div>
+      <div class="pub-t">Weighted Federated Learning with Encryption for Diabetes Classification</div>
+      <div class="pub-a"><b>Zhao P.</b>, Yue Z., Liu X., Wu J.</div>
+      <div class="pub-v">IEEE CPS, AIxMHC · Taiwan, 2025 · <em>Accepted</em></div>
+    </div>
+    <span class="pub-badge bc">Conference</span>
+  </div>
+
+  <div class="pub-card stagger-2" data-type="c">
+    <div class="pub-yr">2022</div>
+    <div>
+      <div class="pub-t">An Attention-Based LSTM Framework for Detection of Bitcoin Scams</div>
+      <div class="pub-a"><b>Zhao P.</b>, Tian W., Xiao L., Liu X., Wu J.</div>
+      <div class="pub-v">IEEE HDIS · Tianjin, 2022</div>
+    </div>
+    <span class="pub-badge bb">🏆 Best Paper Nom.</span>
+  </div>
+
+  <div class="pub-card stagger-3" data-type="c">
+    <div class="pub-yr">2022</div>
+    <div>
+      <div class="pub-t">Prediction of Solar Power via Statistical and Machine Learning Methods</div>
+      <div class="pub-a"><b>Zhao P.</b>, Tian W.</div>
+      <div class="pub-v">IOP Conference Series · Tokyo, 2022</div>
+    </div>
+    <span class="pub-badge bc">Conference</span>
+  </div>
+
+</div>
+
+<!-- ═══ CONTACT ═══ -->
+<div class="warm-section-title">📬 Let's Connect</div>
+
+<div class="contact-box">
+  <div class="contact-text-area">
+    <p class="contact-tagline">"Open to collaboration & research discussions!"</p>
+    <a href="mailto:Puyang.Zhao@rice.edu" class="contact-email-link">✉ Puyang.Zhao@rice.edu</a>
+    <div class="social-links">
+      <a href="https://scholar.google.com/citations?user=UeUkeiIAAAAJ" target="_blank" class="s-link">📖 Scholar</a>
+      <a href="https://github.com/puyangzhao" target="_blank" class="s-link">⌥ GitHub</a>
+      <a href="https://www.linkedin.com/in/puyang-zhao-24343b191/" target="_blank" class="s-link">🔗 LinkedIn</a>
+      <a href="https://orcid.org/0009-0002-8660-4835" target="_blank" class="s-link">◎ ORCID</a>
+      <a href="https://www.researchgate.net/profile/Puyang-Zhao" target="_blank" class="s-link">🔬 ResearchGate</a>
+    </div>
   </div>
 </div>
 
-<div class="pub-item">
-  <span class="pub-year">2025</span>
-  <div class="pub-content">
-    <div class="pub-title">Reproducible and Generalizable Speech Emotion Recognition via an Intelligent Fusion Network <span class="pub-badge badge-j">Journal</span></div>
-    <div class="pub-authors">Zhang H., <strong>Zhao P.*</strong>, Tang G., Li Z., Yuan Z.</div>
-    <div class="pub-venue">Biomedical Signal Processing and Control, May 2025</div>
+<!-- ═══ GLOBE ═══ -->
+<div class="globe-wrap">
+  <div id="globe-container" style="width:270px;height:270px;overflow:hidden;position:relative;">
+    <script type="text/javascript" id="clstr_globe" src="//clustrmaps.com/globe.js?d=clIdEPFSxTObYL5YCT6KPfejmqi13_-8ETks5Uwv8eQ"></script>
   </div>
 </div>
 
-<div class="pub-item">
-  <span class="pub-year">2025</span>
-  <div class="pub-content">
-    <div class="pub-title">Pre-attentive Speech Signal Processing with Adaptive Routing for Emotion Recognition <span class="pub-badge badge-j">Journal</span></div>
-    <div class="pub-authors">Zhang H., Pang Z., <strong>Zhao P.</strong>, Tang G., Shen L., Wang G.</div>
-    <div class="pub-venue">Biomedical Signal Processing and Control, 2025</div>
-  </div>
-</div>
-
-<div class="pub-item">
-  <span class="pub-year">2025</span>
-  <div class="pub-content">
-    <div class="pub-title">Sparse Temporal-Aware Capsule Network for Robust Speech Emotion Recognition <span class="pub-badge badge-j">Journal</span></div>
-    <div class="pub-authors">Zhang H.*, Huang H., <strong>Zhao P.</strong>, Yu Z.</div>
-    <div class="pub-venue">Engineering Applications of Artificial Intelligence, 2025</div>
-  </div>
-</div>
-
-<div class="pub-item">
-  <span class="pub-year">2024</span>
-  <div class="pub-content">
-    <div class="pub-title">CENN: Capsule-Enhanced Neural Network with Innovative Metrics for Robust Speech Emotion Recognition <span class="pub-badge badge-j">Journal</span></div>
-    <div class="pub-authors">Zhang H.*, Huang H., <strong>Zhao P.</strong>, Zhu X., Yu Z.</div>
-    <div class="pub-venue">Knowledge-Based Systems, Sep 2024</div>
-  </div>
-</div>
-
-<div class="pub-item">
-  <span class="pub-year">2024</span>
-  <div class="pub-content">
-    <div class="pub-title">DiGAN Breakthrough: Advancing Diabetic Data Analysis with Innovative GAN-Based Imbalance Correction <span class="pub-badge badge-j">Journal</span></div>
-    <div class="pub-authors"><strong>Zhao P.</strong>, Liu X., Yue Z., Zhao Q., Liu X., Deng Y., Wu J.*</div>
-    <div class="pub-venue">Computer Methods and Programs in Biomedicine Update, 2024</div>
-  </div>
-</div>
-
-**Conference Proceedings**
-
-<div class="pub-item">
-  <span class="pub-year">2025</span>
-  <div class="pub-content">
-    <div class="pub-title">Weighted Federated Learning with Encryption for Diabetes Classification <span class="pub-badge badge-c">Conference</span></div>
-    <div class="pub-authors"><strong>Zhao P.</strong>, Yue Z., Liu X., Wu J.</div>
-    <div class="pub-venue">IEEE CPS, AIxMHC · Taiwan, 2025 · <em>Accepted</em></div>
-  </div>
-</div>
-
-<div class="pub-item">
-  <span class="pub-year">2022</span>
-  <div class="pub-content">
-    <div class="pub-title">An Attention-Based LSTM Framework for Detection of Bitcoin Scams <span class="pub-badge badge-best">🏆 Best Paper Nom.</span></div>
-    <div class="pub-authors"><strong>Zhao P.</strong>, Tian W., Xiao L., Liu X., Wu J.</div>
-    <div class="pub-venue">IEEE HDIS · Tianjin, 2022</div>
-  </div>
-</div>
-
-<div class="pub-item">
-  <span class="pub-year">2022</span>
-  <div class="pub-content">
-    <div class="pub-title">Prediction of Solar Power via Statistical and Machine Learning Methods <span class="pub-badge badge-c">Conference</span></div>
-    <div class="pub-authors"><strong>Zhao P.</strong>, Tian W.</div>
-    <div class="pub-venue">IOP Conference Series · Tokyo, 2022</div>
-  </div>
-</div>
-
----
-
-<div class="section-title-custom">📬 Contact</div>
-
-Feel free to reach out if you're interested in collaborating or have any questions about my research.
-
-📧 [Puyang.Zhao@rice.edu](mailto:Puyang.Zhao@rice.edu)
-
----
-
-<div id="globe-container" style="width:270px;height:270px;overflow:hidden;position:relative;margin:1.5em 0;">
-  <script type="text/javascript" id="clstr_globe" src="//clustrmaps.com/globe.js?d=clIdEPFSxTObYL5YCT6KPfejmqi13_-8ETks5Uwv8eQ"></script>
-</div>
-
+<!-- ═══ PHOTO STRIP ═══ -->
 <div class="photo-strip">
   <img src="images/tianjin.jpg" alt="Tianjin">
   <img src="images/uth.png" alt="UTH">
@@ -329,4 +648,53 @@ Feel free to reach out if you're interested in collaborating or have any questio
   <img src="images/rice.png" alt="Rice">
 </div>
 
-*Last updated: February 2026*
+<p style="font-size:0.78em;color:#b09080;margin-top:1.5em;"><em>Last updated: February 2026</em></p>
+
+<!-- ═══ SCROLL ANIMATION JS ═══ -->
+<script>
+(function() {
+  // Intersection Observer for scroll-in animations
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+  document.querySelectorAll('.r-card, .edu-item, .pub-card').forEach(el => {
+    observer.observe(el);
+  });
+
+  // Stagger delays for research cards
+  document.querySelectorAll('#researchGrid .r-card').forEach((el, i) => {
+    el.style.animationDelay = (i * 0.08) + 's';
+  });
+
+  // Publication filter with smooth fade
+  window.filterPubs = function(type, btn) {
+    document.querySelectorAll('.pub-tab').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+
+    document.querySelectorAll('.pub-card').forEach((card, i) => {
+      const match = type === 'all' || card.dataset.type === type;
+      if (match) {
+        card.style.display = 'grid';
+        card.style.animationDelay = (i * 0.06) + 's';
+        // Re-trigger animation
+        card.classList.remove('visible');
+        void card.offsetWidth;
+        card.classList.add('visible');
+      } else {
+        card.style.display = 'none';
+      }
+    });
+  };
+
+  // Trigger visible for all on load
+  setTimeout(() => {
+    document.querySelectorAll('.pub-card').forEach(el => el.classList.add('visible'));
+  }, 300);
+})();
+</script>
