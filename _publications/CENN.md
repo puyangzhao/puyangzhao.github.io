@@ -54,7 +54,7 @@ citation: 'Huiyun Zhang, Heming Huang, Puyang Zhao, Xiaojun Zhu, Zhenbao Yu, CEN
 <div class="section-card">
 <h3>📋 BibTeX Citation</h3>
 <div style="position:relative;">
-<pre class="bibtex-block" id="bib-cenn">@article{zhang2024cenn,
+<pre class="bibtex-block" id="bib-cenn">{% raw %}@article{zhang2024cenn,
   title     = {{CENN}: Capsule-Enhanced Neural Network with 
                Innovative Metrics for Robust Speech Emotion 
                Recognition},
@@ -65,7 +65,7 @@ citation: 'Huiyun Zhang, Heming Huang, Puyang Zhao, Xiaojun Zhu, Zhenbao Yu, CEN
   month     = {sep},
   publisher = {Elsevier},
   url       = {https://www.sciencedirect.com/science/article/pii/S095070512401133X}
-}</pre>
+}{% endraw %}</pre>
 <button class="copy-btn" onclick="copyBib('bib-cenn',this)">📋 Copy</button>
 </div>
 </div>
