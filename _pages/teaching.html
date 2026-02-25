@@ -5,8 +5,123 @@ permalink: /teaching/
 author_profile: true
 ---
 
-{% include base_path %}
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=Lora:ital,wght@0,600;1,400&display=swap');
 
-{% for post in site.teaching reversed %}
-  {% include archive-single.html %}
-{% endfor %}
+.teaching-page { font-family: 'Nunito', sans-serif; }
+
+.teaching-header {
+  background: linear-gradient(135deg, #fdf6ee 0%, #fce8d5 100%);
+  border-radius: 16px;
+  padding: 1.8em 2.2em;
+  margin-bottom: 2em;
+  border: 1.5px solid #f0d4c0;
+  box-shadow: 0 4px 20px rgba(200,120,80,0.08);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1em;
+}
+.teaching-header-title { font-family: 'Lora', serif; font-size: 1.5em; font-weight: 600; color: #3d2b1f; margin: 0 0 0.3em; }
+.teaching-header-sub { font-size: 0.88em; color: #7a5c4e; margin: 0; }
+
+.teaching-stats { display: flex; gap: 1.5em; }
+.stat-item { text-align: center; }
+.stat-num { font-family: 'Lora', serif; font-size: 2em; font-weight: 600; color: #c0613a; line-height: 1; display: block; }
+.stat-label { font-size: 0.72em; color: #a08070; text-transform: uppercase; letter-spacing: 0.08em; }
+
+.section-label { font-family: 'Lora', serif; font-size: 1.1em; font-weight: 600; color: #3d2b1f; margin: 2em 0 0.8em; display: flex; align-items: center; gap: 10px; }
+.section-label::after { content: ''; flex: 1; height: 1.5px; background: linear-gradient(to right, rgba(192,97,58,0.3), transparent); margin-left: 6px; }
+
+.teach-card {
+  background: #fff;
+  border-radius: 14px;
+  padding: 1.4em 1.8em;
+  margin-bottom: 12px;
+  border: 1.5px solid #f0e0d4;
+  box-shadow: 0 2px 8px rgba(200,120,80,0.05);
+  display: grid;
+  grid-template-columns: 52px 1fr auto;
+  gap: 14px;
+  align-items: start;
+  text-decoration: none;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.teach-card:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(192,97,58,0.1); border-color: #e0a888; text-decoration: none; }
+.teach-card.blue { border-color: #c0d4f0; }
+.teach-card.blue:hover { border-color: #90b4f0; box-shadow: 0 8px 24px rgba(80,120,200,0.1); }
+
+.teach-icon { display: flex; align-items: flex-start; justify-content: center; padding-top: 2px; }
+
+.teach-body {}
+.teach-title { font-weight: 700; font-size: 0.95em; color: #3d2b1f; margin: 0 0 5px; line-height: 1.4; }
+.teach-card.blue .teach-title { color: #1a2a3a; }
+.teach-venue { font-size: 0.83em; color: #9a7060; margin: 0 0 6px; }
+.teach-card.blue .teach-venue { color: #4a6a9a; }
+.teach-courses { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 4px; }
+.course-tag { font-size: 0.72em; font-weight: 700; padding: 2px 9px; border-radius: 12px; background: #fdf0e8; color: #c0613a; border: 1px solid #f0d4c0; }
+.teach-card.blue .course-tag { background: #e8f0fd; color: #1565c0; border-color: #c0d4f0; }
+.teach-meta { font-size: 0.78em; color: #b09080; margin-top: 5px; }
+.teach-card.blue .teach-meta { color: #7090b0; }
+
+.teach-badge { font-size: 0.68em; font-weight: 700; padding: 3px 10px; border-radius: 20px; white-space: nowrap; align-self: flex-start; }
+.badge-ug { background: #fdf0e8; color: #c0613a; border: 1px solid #f0d4c0; }
+.badge-grad { background: #e8f0fd; color: #1565c0; border: 1px solid #c0d4f0; }
+</style>
+
+<div class="teaching-page">
+
+<div class="teaching-header">
+  <div>
+    <p class="teaching-header-title">🏫 Teaching</p>
+    <p class="teaching-header-sub">Undergraduate and graduate courses in Statistics, Biostatistics, and Data Science</p>
+  </div>
+  <div class="teaching-stats">
+    <div class="stat-item"><span class="stat-num">2</span><span class="stat-label">Positions</span></div>
+    <div class="stat-item"><span class="stat-num">6</span><span class="stat-label">Courses</span></div>
+    <div class="stat-item"><span class="stat-num">2</span><span class="stat-label">Institutions</span></div>
+  </div>
+</div>
+
+<!-- 2024 -->
+<div class="section-label">2024</div>
+
+<a href="/teaching/2024_fall_teaching-2" class="teach-card blue">
+  <div class="teach-icon">
+    <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#1565c0" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+  </div>
+  <div class="teach-body">
+    <p class="teach-title">Teaching Assistant — Graduate Biostatistics &amp; Data Science</p>
+    <p class="teach-venue">UTHealth Houston · Department of Biostatistics and Data Science · Houston, TX</p>
+    <div class="teach-courses">
+      <span class="course-tag">PH 1700 Intermediate Biostatistics</span>
+      <span class="course-tag">PH 1976 Data Analytics and Predictions</span>
+    </div>
+    <p class="teach-meta">Fall 2024 · STATA tutorials · Office hours · Exam design</p>
+  </div>
+  <span class="teach-badge badge-grad">Graduate</span>
+</a>
+
+<!-- 2021 -->
+<div class="section-label">2021</div>
+
+<a href="/teaching/2021-fall-teaching-1" class="teach-card">
+  <div class="teach-icon">
+    <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#c0613a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+  </div>
+  <div class="teach-body">
+    <p class="teach-title">Assistant Instructor I — Undergraduate Statistics &amp; Mathematics</p>
+    <p class="teach-venue">BNU-HKBU United International College · Department of Statistics · Guangdong, China</p>
+    <div class="teach-courses">
+      <span class="course-tag">Calculus I (1002)</span>
+      <span class="course-tag">Calculus I (1004)</span>
+      <span class="course-tag">Logistics &amp; Network Models</span>
+      <span class="course-tag">Data Analysis for Business (1001)</span>
+    </div>
+    <p class="teach-meta">Fall 2021 · Lesson planning · Exam design · Tutoring</p>
+  </div>
+  <span class="teach-badge badge-ug">Undergraduate</span>
+</a>
+
+</div>
