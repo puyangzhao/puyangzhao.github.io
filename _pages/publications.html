@@ -5,12 +5,367 @@ permalink: /publications/
 author_profile: true
 ---
 
-{% if site.author.googlescholar %}
-  <div class="wordwrap">You can also find my articles on <a href="{{site.author.googlescholar}}">my Google Scholar profile</a>.</div>
-{% endif %}
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=Lora:ital,wght@0,600;1,400&display=swap');
 
-{% include base_path %}
+.pubs-page { font-family: 'Nunito', sans-serif; }
 
-{% for post in site.publications reversed %}
-  {% include archive-single.html %}
-{% endfor %}
+.pubs-header {
+  background: linear-gradient(135deg, #fdf6ee 0%, #fce8d5 100%);
+  border-radius: 16px;
+  padding: 1.8em 2.2em;
+  margin-bottom: 2em;
+  border: 1.5px solid #f0d4c0;
+  box-shadow: 0 4px 20px rgba(200,120,80,0.08);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1em;
+}
+
+.pubs-header-left {}
+.pubs-header-title {
+  font-family: 'Lora', serif;
+  font-size: 1.5em;
+  font-weight: 600;
+  color: #3d2b1f;
+  margin: 0 0 0.3em 0;
+}
+.pubs-header-sub {
+  font-size: 0.88em;
+  color: #7a5c4e;
+  margin: 0;
+}
+.pubs-header-sub a {
+  color: #c0613a;
+  font-weight: 700;
+  text-decoration: none;
+}
+.pubs-header-sub a:hover { text-decoration: underline; }
+
+.pubs-stats {
+  display: flex;
+  gap: 1.5em;
+}
+.stat-item { text-align: center; }
+.stat-num {
+  font-family: 'Lora', serif;
+  font-size: 2em;
+  font-weight: 600;
+  color: #c0613a;
+  line-height: 1;
+  display: block;
+}
+.stat-label {
+  font-size: 0.72em;
+  color: #a08070;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.pub-filters {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 1.5em;
+  flex-wrap: wrap;
+}
+.pub-filter-btn {
+  padding: 6px 18px;
+  border-radius: 20px;
+  border: 1.5px solid #e0c8bc;
+  background: transparent;
+  font-family: 'Nunito', sans-serif;
+  font-size: 0.82em;
+  font-weight: 700;
+  color: #a08070;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.pub-filter-btn.active, .pub-filter-btn:hover {
+  background: #c0613a;
+  border-color: #c0613a;
+  color: white;
+  box-shadow: 0 3px 10px rgba(192,97,58,0.25);
+  transform: translateY(-1px);
+}
+
+.pub-section-label {
+  font-family: 'Lora', serif;
+  font-size: 1.15em;
+  font-weight: 600;
+  color: #3d2b1f;
+  margin: 2em 0 0.8em 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.pub-section-label::after {
+  content: '';
+  flex: 1;
+  height: 1.5px;
+  background: linear-gradient(to right, rgba(192,97,58,0.3), transparent);
+  margin-left: 6px;
+}
+
+.pub-card {
+  background: #fff;
+  border-radius: 14px;
+  padding: 1.3em 1.6em;
+  margin-bottom: 10px;
+  border: 1.5px solid #f0e0d4;
+  box-shadow: 0 2px 8px rgba(200,120,80,0.05);
+  display: grid;
+  grid-template-columns: 46px 1fr auto;
+  gap: 14px;
+  align-items: start;
+  transition: transform 0.2s, box-shadow 0.2s;
+  text-decoration: none;
+}
+.pub-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(192,97,58,0.1);
+  border-color: #e0a888;
+  text-decoration: none;
+}
+
+.pub-yr {
+  font-size: 0.75em;
+  font-weight: 700;
+  color: #c0613a;
+  background: #fdf0e8;
+  border-radius: 8px;
+  padding: 4px 6px;
+  text-align: center;
+  line-height: 1.3;
+}
+
+.pub-body {}
+.pub-title {
+  font-weight: 700;
+  font-size: 0.93em;
+  color: #3d2b1f;
+  margin: 0 0 4px 0;
+  line-height: 1.45;
+}
+.pub-authors {
+  font-size: 0.82em;
+  color: #9a7060;
+  margin: 0 0 3px 0;
+}
+.pub-authors b { color: #c0613a; }
+.pub-venue {
+  font-size: 0.8em;
+  color: #b09080;
+  font-style: italic;
+  margin: 0;
+}
+
+.pub-badge {
+  font-size: 0.68em;
+  font-weight: 700;
+  padding: 3px 9px;
+  border-radius: 20px;
+  white-space: nowrap;
+  align-self: flex-start;
+  letter-spacing: 0.04em;
+}
+.bj { background: #e8f5e9; color: #2e7d32; border: 1px solid #c8e6c9; }
+.bc { background: #e3f2fd; color: #1565c0; border: 1px solid #bbdefb; }
+.bb { background: #fff8e1; color: #e65100; border: 1px solid #ffe082; }
+.bf { background: #eae8fd; color: #512da8; border: 1px solid #d1c4e9; }
+
+.no-results {
+  text-align: center;
+  padding: 3em;
+  color: #a08070;
+  font-style: italic;
+  display: none;
+}
+</style>
+
+<div class="pubs-page">
+
+<div class="pubs-header">
+  <div class="pubs-header-left">
+    <p class="pubs-header-title">📚 Publications</p>
+    <p class="pubs-header-sub">
+      {% if site.author.googlescholar %}
+      Also available on <a href="{{ site.author.googlescholar }}" target="_blank">Google Scholar</a> ↗
+      {% endif %}
+    </p>
+  </div>
+  <div class="pubs-stats">
+    <div class="stat-item"><span class="stat-num">8</span><span class="stat-label">Journal</span></div>
+    <div class="stat-item"><span class="stat-num">3</span><span class="stat-label">Conference</span></div>
+    <div class="stat-item"><span class="stat-num">10+</span><span class="stat-label">Total</span></div>
+  </div>
+</div>
+
+<div class="pub-filters">
+  <button class="pub-filter-btn active" onclick="filterPubs('all',this)">All</button>
+  <button class="pub-filter-btn" onclick="filterPubs('journal',this)">Journal Articles</button>
+  <button class="pub-filter-btn" onclick="filterPubs('conference',this)">Conference Papers</button>
+  <button class="pub-filter-btn" onclick="filterPubs('federated',this)">Federated Learning</button>
+  <button class="pub-filter-btn" onclick="filterPubs('ser',this)">Speech Emotion</button>
+  <button class="pub-filter-btn" onclick="filterPubs('clinical',this)">Clinical / Health</button>
+</div>
+
+<!-- ── 2026 ── -->
+<div class="pub-section-label" data-section="2026">2026</div>
+
+<a href="/publication/DemoFL" class="pub-card" data-type="journal federated clinical">
+  <div class="pub-yr">2026</div>
+  <div class="pub-body">
+    <p class="pub-title">Demography-Aware Personalized Federated Learning for Fair, Private, and Efficient Clinical Risk Prediction</p>
+    <p class="pub-authors"><b>Zhao P.</b>, Yue Z., Mi N., Zhang H.</p>
+    <p class="pub-venue">Biomedical Signal Processing and Control, Vol. 114, p. 109312</p>
+  </div>
+  <span class="pub-badge bj">Journal</span>
+</a>
+
+<a href="/publication/Pre-attentive" class="pub-card" data-type="journal ser">
+  <div class="pub-yr">2026</div>
+  <div class="pub-body">
+    <p class="pub-title">Pre-attentive Speech Signal Processing with Adaptive Routing for Emotion Recognition</p>
+    <p class="pub-authors">Zhang H., Pang Z., <b>Zhao P.</b>, Tang G., Shen L., Wang G.</p>
+    <p class="pub-venue">Biomedical Signal Processing and Control, Vol. 112, p. 108782</p>
+  </div>
+  <span class="pub-badge bj">Journal</span>
+</a>
+
+<!-- ── 2025 ── -->
+<div class="pub-section-label" data-section="2025">2025</div>
+
+<a href="/publication/vaping-heart-rate" class="pub-card" data-type="journal clinical">
+  <div class="pub-yr">2025</div>
+  <div class="pub-body">
+    <p class="pub-title">Applied Statistical Methods for Identifying Features of Heart Rate Associated with Nicotine Vaping</p>
+    <p class="pub-authors"><b>Zhao P.</b>, Yang J.J., Buu A.</p>
+    <p class="pub-venue">The American Journal of Drug and Alcohol Abuse, Feb 2025</p>
+  </div>
+  <span class="pub-badge bj">Journal</span>
+</a>
+
+<a href="/publication/IFN" class="pub-card" data-type="journal ser">
+  <div class="pub-yr">2025</div>
+  <div class="pub-body">
+    <p class="pub-title">Reproducible and Generalizable Speech Emotion Recognition via an Intelligent Fusion Network</p>
+    <p class="pub-authors">Zhang H., <b>Zhao P.</b>, Tang G., Li Z., Yuan Z.</p>
+    <p class="pub-venue">Biomedical Signal Processing and Control, Vol. 109, p. 107996</p>
+  </div>
+  <span class="pub-badge bj">Journal</span>
+</a>
+
+<a href="/publication/STACN" class="pub-card" data-type="journal ser">
+  <div class="pub-yr">2025</div>
+  <div class="pub-body">
+    <p class="pub-title">Sparse Temporal Aware Capsule Network for Robust Speech Emotion Recognition</p>
+    <p class="pub-authors">Zhang H., Huang H., <b>Zhao P.</b>, Yu Z.</p>
+    <p class="pub-venue">Engineering Applications of Artificial Intelligence</p>
+  </div>
+  <span class="pub-badge bj">Journal</span>
+</a>
+
+<a href="/publication/WeightedFL" class="pub-card" data-type="conference federated clinical">
+  <div class="pub-yr">2025</div>
+  <div class="pub-body">
+    <p class="pub-title">Weighted Federated Learning with Encryption for Diabetes Classification</p>
+    <p class="pub-authors"><b>Zhao P.</b>, Yue Z., Liu X., Wu J.</p>
+    <p class="pub-venue">2025 Second International Conference on AI for Medicine, Health and Care (AIxMHC) · IEEE</p>
+  </div>
+  <span class="pub-badge bc">Conference</span>
+</a>
+
+<!-- ── 2024 ── -->
+<div class="pub-section-label" data-section="2024">2024</div>
+
+<a href="/publication/CENN" class="pub-card" data-type="journal ser">
+  <div class="pub-yr">2024</div>
+  <div class="pub-body">
+    <p class="pub-title">CENN: Capsule-Enhanced Neural Network with Innovative Metrics for Robust Speech Emotion Recognition</p>
+    <p class="pub-authors">Zhang H., Huang H., <b>Zhao P.</b>, Zhu X., Yu Z.</p>
+    <p class="pub-venue">Knowledge-Based Systems, Sep 2024</p>
+  </div>
+  <span class="pub-badge bj">Journal</span>
+</a>
+
+<a href="/publication/DiGAN" class="pub-card" data-type="journal clinical">
+  <div class="pub-yr">2024</div>
+  <div class="pub-body">
+    <p class="pub-title">DiGAN Breakthrough: Advancing Diabetic Data Analysis with Innovative GAN-Based Imbalance Correction Techniques</p>
+    <p class="pub-authors"><b>Zhao P.</b>, Liu X., Yue Z. et al.</p>
+    <p class="pub-venue">Computer Methods and Programs in Biomedicine Update, Apr 2024</p>
+  </div>
+  <span class="pub-badge bj">Journal</span>
+</a>
+
+<!-- ── 2022 ── -->
+<div class="pub-section-label" data-section="2022">2022</div>
+
+<a href="/publication/LSTM_BITCOIN" class="pub-card" data-type="conference">
+  <div class="pub-yr">2022</div>
+  <div class="pub-body">
+    <p class="pub-title">An Attention-based Long Short-Term Memory Framework for Detection of Bitcoin Scams</p>
+    <p class="pub-authors"><b>Zhao P.</b>, Tian W., Xiao L., Liu X., Wu J.</p>
+    <p class="pub-venue">IEEE HDIS · Tianjin, Dec 2022 · pp. 21–26</p>
+  </div>
+  <span class="pub-badge bb">🏆 Best Paper Nom.</span>
+</a>
+
+<a href="/publication/Solar_Power" class="pub-card" data-type="conference">
+  <div class="pub-yr">2022</div>
+  <div class="pub-body">
+    <p class="pub-title">Research on Prediction of Solar Power Considering the Methods of Statistical and Machine Learning</p>
+    <p class="pub-authors"><b>Zhao P.</b>, Tian W.</p>
+    <p class="pub-venue">IOP Conference Series: Earth and Environmental Science · Tokyo, Jun 2022</p>
+  </div>
+  <span class="pub-badge bc">Conference</span>
+</a>
+
+<p class="no-results" id="noResults">No publications found for this filter.</p>
+
+</div>
+
+<script>
+function filterPubs(type, btn) {
+  document.querySelectorAll('.pub-filter-btn').forEach(function(b){ b.classList.remove('active'); });
+  btn.classList.add('active');
+
+  var cards = document.querySelectorAll('.pub-card');
+  var sections = document.querySelectorAll('.pub-section-label');
+  var visible = 0;
+
+  cards.forEach(function(card, i) {
+    var types = card.dataset.type || '';
+    var show = type === 'all' || types.indexOf(type) !== -1;
+    card.style.display = show ? 'grid' : 'none';
+    if (show) {
+      card.style.opacity = '0';
+      card.style.transform = 'translateY(12px)';
+      setTimeout(function(c){ 
+        c.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
+        c.style.opacity = '1'; 
+        c.style.transform = 'translateY(0)';
+      }, i * 50, card);
+      visible++;
+    }
+  });
+
+  // Hide year section labels if no cards visible under them
+  sections.forEach(function(section) {
+    var year = section.dataset.section;
+    var hasVisible = false;
+    cards.forEach(function(card) {
+      if (card.querySelector('.pub-yr') && 
+          card.querySelector('.pub-yr').textContent.trim() === year &&
+          card.style.display !== 'none') {
+        hasVisible = true;
+      }
+    });
+    section.style.display = hasVisible ? 'flex' : 'none';
+  });
+
+  document.getElementById('noResults').style.display = visible === 0 ? 'block' : 'none';
+}
+</script>
