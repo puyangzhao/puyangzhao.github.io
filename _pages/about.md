@@ -89,6 +89,20 @@ redirect_from:
 .photo-strip img:hover { transform: scale(1.08) translateY(-3px); box-shadow: 0 6px 16px rgba(192,97,58,0.18); }
 
 @keyframes fadeSlideDown { from { opacity: 0; transform: translateY(-18px); } to { opacity: 1; transform: translateY(0); } }
+
+.news-list { list-style: none; padding: 0; margin: 0.5em 0 1em; }
+.news-item { display: flex; gap: 14px; align-items: flex-start; padding: 13px 16px; border-radius: 12px; border: 1.5px solid #f0e0d4; background: #fff; margin-bottom: 8px; box-shadow: 0 2px 8px rgba(200,120,80,0.05); transition: transform 0.2s, box-shadow 0.2s, opacity 0.45s ease; opacity: 0; transform: translateX(-14px); }
+.news-item.visible { opacity: 1; transform: translateX(0); }
+.news-item:hover { transform: translateX(4px) !important; box-shadow: 0 5px 18px rgba(192,97,58,0.1) !important; }
+.news-date { flex-shrink: 0; background: #fdf0e8; color: #c0613a; font-size: 0.72em; font-weight: 700; padding: 3px 9px; border-radius: 20px; letter-spacing: 0.04em; white-space: nowrap; margin-top: 2px; }
+.news-text { font-size: 0.9em; color: #4a3528; line-height: 1.6; margin: 0; }
+.news-tag { display: inline-block; font-size: 0.68em; font-weight: 700; padding: 2px 8px; border-radius: 20px; margin-left: 6px; letter-spacing: 0.04em; vertical-align: middle; }
+.tag-paper { background: #e8f5e9; color: #2e7d32; border: 1px solid #c8e6c9; }
+.tag-talk { background: #e3f2fd; color: #1565c0; border: 1px solid #bbdefb; }
+.tag-service { background: #f3e5f5; color: #6a1b9a; border: 1px solid #e1bee7; }
+.tag-misc { background: #fce4ec; color: #880e4f; border: 1px solid #f8bbd0; }
+
+  
 </style>
 
 <div class="hero-banner">
@@ -101,6 +115,12 @@ redirect_from:
 </div>
 <p class="hero-bio">I am currently a <strong>Postdoctoral Associate</strong> at Rice University, working with Dr. Hanjie Chen. I earned my Ph.D. in Biostatistics from UTHealth Houston (Dr. James Yang, Dr. Anne Buu, Dr. Theresa Tran). I received my M.Sc. from the University of Melbourne (Dr. Howard Bondell) and my B.Sc. from Hong Kong Baptist University (Dr. Jingjing Wu). My work sits at the intersection of <strong>biostatistics</strong>, <strong>machine learning</strong>, and clinical applications.</p>
 </div>
+<div class="warm-section-title">📰 News</div>
+<ul class="news-list">
+<li class="news-item"><span class="news-date">Apr 2026</span><p class="news-text">Your news here.<span class="news-tag tag-talk">Talk</span></p></li>
+<li class="news-item"><span class="news-date">Mar 2026</span><p class="news-text">Paper accepted at <em>Journal Name</em>.<span class="news-tag tag-paper">Paper</span></p></li>
+<li class="news-item"><span class="news-date">Jul 2024</span><p class="news-text">Started Postdoctoral Associate position at <strong>Rice University</strong>.<span class="news-tag tag-misc">New Role</span></p></li>
+</ul>
 
 <div class="warm-section-title">🔬 Research Interests</div>
 <div class="research-grid" id="researchGrid">
