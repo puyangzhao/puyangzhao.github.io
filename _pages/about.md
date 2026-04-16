@@ -105,13 +105,14 @@ redirect_from:
 
 <div class="warm-section-title"><span>§</span> News</div>
 <ul class="news-list" id="newsList">
-<li class="news-item"><span class="news-date">Apr 2026</span><p class="news-text">Presenting at <strong>ICLR 2026</strong> in Vienna — see you there!<span class="news-tag tag-talk">Talk</span></p></li>
-<li class="news-item"><span class="news-date">Mar 2026</span><p class="news-text">New paper accepted at <em>Biomedical Signal Processing and Control</em>: "Pre-attentive Speech Signal Processing with Adaptive Routing for Emotion Recognition".<span class="news-tag tag-paper">Paper</span></p></li>
-<li class="news-item"><span class="news-date">Feb 2026</span><p class="news-text">Paper published in <em>The American Journal of Drug and Alcohol Abuse</em> on heart rate features associated with nicotine vaping.<span class="news-tag tag-paper">Paper</span></p></li>
-<li class="news-item"><span class="news-date">Jan 2026</span><p class="news-text">Joined the <strong>Program Committee</strong> for AAAI 2026 Workshop on AI for Health.<span class="news-tag tag-service">Service</span></p></li>
-<li class="news-item"><span class="news-date">Dec 2025</span><p class="news-text">Conference paper on <em>Weighted Federated Learning with Encryption for Diabetes Classification</em> accepted at <strong>IEEE CPS AIxMHC</strong> (Taiwan).<span class="news-tag tag-paper">Paper</span></p></li>
-<li class="news-item"><span class="news-date">Sep 2025</span><p class="news-text">Paper published in <em>Knowledge-Based Systems</em>: CENN — Capsule-Enhanced Neural Network for Robust Speech Emotion Recognition.<span class="news-tag tag-paper">Paper</span></p></li>
-<li class="news-item"><span class="news-date">Jul 2024</span><p class="news-text">Started Postdoctoral Associate position at <strong>Rice University</strong>, working with Dr. Hanjie Chen.<span class="news-tag tag-misc">New Role</span></p></li>
+<li class="news-item"><span class="news-date">Apr 2026</span><p class="news-text">Invited to present at <strong>CAPE Day 2026</strong> (United Way, April 23) on the Poverty Simulator intervention in health professions education.<span class="news-tag tag-talk">Talk</span></p></li>
+<li class="news-item"><span class="news-date">Apr 2026</span><p class="news-text">Paper accepted at <strong>IEEE EIT 2026</strong>: "Comparative Analysis of Shallow and Deep Learning Methods for Diabetes Prediction Using the Pima Indians Dataset".<span class="news-tag tag-paper">Paper</span></p></li>
+<li class="news-item"><span class="news-date">2026</span><p class="news-text">Paper published in <em>Biomedical Signal Processing and Control</em>: "Demography-Aware Personalized Federated Learning for Fair, Private, and Efficient Clinical Risk Prediction".<span class="news-tag tag-paper">Paper</span></p></li>
+<li class="news-item"><span class="news-date">2026</span><p class="news-text">Paper published in <em>Biomedical Signal Processing and Control</em>: "Pre-attentive Speech Signal Processing with Adaptive Routing for Emotion Recognition".<span class="news-tag tag-paper">Paper</span></p></li>
+<li class="news-item"><span class="news-date">2026</span><p class="news-text">Paper presented at the <strong>30th Annual Conference of the International Association</strong>: "Promoting Structural Awareness and Empathy: Evaluation of a Poverty Simulation Intervention in Health Professions Education".<span class="news-tag tag-paper">Paper</span></p></li>
+<li class="news-item"><span class="news-date">Feb 2026</span><p class="news-text">Joined <strong>Rice University</strong> as a Postdoctoral Associate in Computer Science, working with Dr. Hanjie Chen.<span class="news-tag tag-misc">New Role</span></p></li>
+<li class="news-item"><span class="news-date">Dec 2025</span><p class="news-text">Awarded <strong>Ph.D. in Biostatistics</strong> (minor: Health Economics) from UTHealth Houston.<span class="news-tag tag-award">Milestone</span></p></li>
+<li class="news-item"><span class="news-date">2025</span><p class="news-text">Paper accepted at <strong>IEEE AIxMHC 2025</strong> (Taiwan): "Weighted Federated Learning with Encryption for Diabetes Classification".<span class="news-tag tag-paper">Paper</span></p></li>
 </ul>
 
 <div class="warm-section-title"><span>§</span> Research Interests</div>
@@ -127,7 +128,7 @@ redirect_from:
 <div class="warm-section-title"><span>§</span> Education</div>
 <div class="edu-timeline">
 <div class="edu-item"><div class="edu-period">2024 – Present</div><div><p class="edu-degree">Postdoctoral Associate in Computer Science</p><p class="edu-school">Rice University, Houston, TX</p><p class="edu-advisor">Advisor: Dr. Hanjie Chen</p></div></div>
-<div class="edu-item"><div class="edu-period">Ph.D.</div><div><p class="edu-degree">Biostatistics</p><p class="edu-school">UTHealth Houston</p><p class="edu-advisor">Advisors: Dr. James Yang · Dr. Anne Buu · Dr. Theresa Tran</p></div></div>
+<div class="edu-item"><div class="edu-period">2025 · Ph.D.</div><div><p class="edu-degree">Biostatistics (minor: Health Economics)</p><p class="edu-school">UTHealth Houston</p><p class="edu-advisor">Advisors: Dr. James Yang · Dr. Anne Buu · Dr. Theresa Tran</p></div></div>
 <div class="edu-item"><div class="edu-period">M.Sc.</div><div><p class="edu-degree">Mathematics and Statistics</p><p class="edu-school">University of Melbourne, Australia</p><p class="edu-advisor">Advisor: Dr. Howard Bondell</p></div></div>
 <div class="edu-item"><div class="edu-period">B.Sc.</div><div><p class="edu-degree">Statistics</p><p class="edu-school">Hong Kong Baptist University</p><p class="edu-advisor">Advisor: Dr. Jingjing Wu</p></div></div>
 </div>
