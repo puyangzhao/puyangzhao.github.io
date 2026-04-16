@@ -105,7 +105,6 @@ redirect_from:
 
 <div class="warm-section-title"><span>§</span> News</div>
 <ul class="news-list" id="newsList">
-<li class="news-item"><span class="news-date">Apr 2026</span><p class="news-text">Presenting at <strong>ICLR 2026</strong> in Vienna — see you there!<span class="news-tag tag-talk">Talk</span></p></li>
 <li class="news-item"><span class="news-date">Mar 2026</span><p class="news-text">New paper accepted at <em>Biomedical Signal Processing and Control</em>: "Pre-attentive Speech Signal Processing with Adaptive Routing for Emotion Recognition".<span class="news-tag tag-paper">Paper</span></p></li>
 <li class="news-item"><span class="news-date">Feb 2026</span><p class="news-text">Paper published in <em>The American Journal of Drug and Alcohol Abuse</em> on heart rate features associated with nicotine vaping.<span class="news-tag tag-paper">Paper</span></p></li>
 <li class="news-item"><span class="news-date">Jan 2026</span><p class="news-text">Joined the <strong>Program Committee</strong> for AAAI 2026 Workshop on AI for Health.<span class="news-tag tag-service">Service</span></p></li>
