@@ -185,7 +185,6 @@ redirect_from:
     margin-top:6px;
   }
 }
-</style>
 
 <div class="hero-banner">
 <div class="hero-greeting">Puyang Zhao</div>
