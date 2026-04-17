@@ -103,17 +103,22 @@ redirect_from:
 <p class="hero-bio">I am a <strong>Postdoctoral Associate</strong> at Rice University, working with Dr. Hanjie Chen. I earned my Ph.D. in Biostatistics from UTHealth Houston (advisors: Dr. James Yang, Dr. Anne Buu, Dr. Theresa Tran), M.Sc. from the University of Melbourne (Dr. Howard Bondell), and B.Sc. from Hong Kong Baptist University (Dr. Jingjing Wu). My work sits at the intersection of <strong>biostatistics</strong>, <strong>machine learning</strong>, and clinical applications.</p>
 </div>
 
-<div class="warm-section-title"><span>§</span> News</div>
+<div class="warm-section-title"><span>📰</span> News</div>
 <ul class="news-list" id="newsList">
-<li class="news-item"><span class="news-date">Apr 23, 2026</span><p class="news-text">Invited to present at <strong>CAPE Day 2026</strong> (Texas Children's Hospital, April 23) on the Poverty Simulator intervention in health professions education.<span class="news-tag tag-talk">Talk</span></p></li>
-<li class="news-item"><span class="news-date">Apr 8, 2026</span><p class="news-text">Paper accepted at <strong>IEEE EIT 2026</strong>: "Comparative Analysis of Shallow and Deep Learning Methods for Diabetes Prediction Using the Pima Indians Dataset".<span class="news-tag tag-paper">Paper</span></p></li>
-<li class="news-item"><span class="news-date">Mar 15, 2026</span><p class="news-text">Oral presentation accepted at the <strong>30th Annual Conference of the International Association</strong>: "Promoting Structural Awareness and Empathy: Evaluation of a Poverty Simulation Intervention in Health Professions Education".<span class="news-tag tag-talk">Talk</span></p></li>
-<li class="news-item"><span class="news-date">Feb 9, 2026</span><p class="news-text">Joined <strong>Rice University</strong> as a Postdoctoral Associate in Computer Science, working with Dr. Hanjie Chen.<span class="news-tag tag-misc">New Role</span></p></li>
-<li class="news-item"><span class="news-date">Dec 12, 2025</span><p class="news-text">Awarded <strong>Ph.D. in Biostatistics</strong> (minor: Health Economics) from UTHealth Houston.<span class="news-tag tag-award">Milestone</span></p></li>
-<li class="news-item"><span class="news-date">Nov 29, 2025</span><p class="news-text">Paper accepted in <em>Biomedical Signal Processing and Control</em>: "Demography-Aware Personalized Federated Learning for Fair, Private, and Efficient Clinical Risk Prediction".<span class="news-tag tag-paper">Paper</span></p></li>
-<li class="news-item"><span class="news-date">Oct 1, 2025</span><p class="news-text">Paper accepted in <em>Biomedical Signal Processing and Control</em>: "Pre-attentive Speech Signal Processing with Adaptive Routing for Emotion Recognition".<span class="news-tag tag-paper">Paper</span></p></li>
-<li class="news-item"><span class="news-date">Jul 11, 2025</span><p class="news-text">Paper accepted at <strong>IEEE AIxMHC 2025</strong> (Taiwan): "Weighted Federated Learning with Encryption for Diabetes Classification".<span class="news-tag tag-paper">Paper</span></p></li>
-<li class="news-item"><span class="news-date">Dec 10, 2024</span><p class="news-text">Paper accepted in <em>The American Journal of Drug and Alcohol Abuse</em>: "Applied Statistical Methods for Identifying Features of Heart Rate Associated with Nicotine Vaping".<span class="news-tag tag-paper">Paper</span></p></li>
+  <li class="news-item">
+    <span class="news-date">Apr 23, 2026</span>
+    <p class="news-text">
+      Invited to present at <strong>CAPE Day 2026</strong> (Texas Children's Hospital, April 23) on the Poverty Simulator intervention in health professions education.
+      <span class="news-tag tag-talk">🎤 Talk</span>
+    </p>
+  </li>
+  <li class="news-item">
+    <span class="news-date">Apr 8, 2026</span>
+    <p class="news-text">
+      Paper accepted at <strong>IEEE EIT 2026</strong>: "Comparative Analysis of Shallow and Deep Learning Methods for Diabetes Prediction Using the Pima Indians Dataset".
+      <span class="news-tag tag-paper">📄 Paper</span>
+    </p>
+  </li>
 </ul>
 
 <div class="warm-section-title"><span>§</span> Research Interests</div>
@@ -240,117 +245,17 @@ redirect_from:
 </style>
 
 <div id="pubContainer">
-
-  <div class="pub-card" data-type="j">
-    <div class="pub-yr">📅 2026</div>
-    <div>
-      <p class="pub-t">⭐ Demography-Aware Personalized Federated Learning for Fair, Private, and Efficient Clinical Risk Prediction</p>
-      <p class="pub-a"><b>Zhao P.</b>, Yue Z., Mi N., Zhang H.</p>
-      <p class="pub-v">Biomedical Signal Processing and Control 114, 109312</p>
-    </div>
-    <span class="pub-badge bj">📘 Journal</span>
-  </div>
-
-  <div class="pub-card" data-type="j">
-    <div class="pub-yr">📅 2026</div>
-    <div>
-      <p class="pub-t">Pre-attentive Speech Signal Processing with Adaptive Routing for Emotion Recognition</p>
-      <p class="pub-a">Zhang H., Pang Z., <b>Zhao P.</b>, Tang G., Shen L., Wang G.</p>
-      <p class="pub-v">Biomedical Signal Processing and Control 112, 108782</p>
-    </div>
-    <span class="pub-badge bj">📘 Journal</span>
-  </div>
-
-  <div class="pub-card" data-type="j">
-    <div class="pub-yr">📅 2025</div>
-    <div>
-      <p class="pub-t">⭐ Applied Statistical Methods for Identifying Features of Heart Rate Associated with Nicotine Vaping</p>
-      <p class="pub-a"><b>Zhao P.</b>, Yang J., Buu A.</p>
-      <p class="pub-v">The American Journal of Drug and Alcohol Abuse 51(2), 165–172</p>
-    </div>
-    <span class="pub-badge bj">📘 Journal</span>
-  </div>
-
-  <div class="pub-card" data-type="j">
-    <div class="pub-yr">📅 2025</div>
-    <div>
-      <p class="pub-t">Reproducible and Generalizable Speech Emotion Recognition via an Intelligent Fusion Network</p>
-      <p class="pub-a">Zhang H., <b>Zhao P.</b>, Tang G., Li Z., Yuan Z.</p>
-      <p class="pub-v">Biomedical Signal Processing and Control 109, 107996</p>
-    </div>
-    <span class="pub-badge bj">📘 Journal</span>
-  </div>
-
-  <div class="pub-card" data-type="j">
-    <div class="pub-yr">📅 2025</div>
-    <div>
-      <p class="pub-t">Sparse Temporal-Aware Capsule Network for Robust Speech Emotion Recognition</p>
-      <p class="pub-a">Zhang H., Huang H., <b>Zhao P.</b>, Yu Z.</p>
-      <p class="pub-v">Engineering Applications of Artificial Intelligence 144, 110060</p>
-    </div>
-    <span class="pub-badge bj">📘 Journal</span>
-  </div>
-
-  <div class="pub-card" data-type="j">
-    <div class="pub-yr">📅 2024</div>
-    <div>
-      <p class="pub-t">CENN: Capsule-Enhanced Neural Network with Innovative Metrics for Robust Speech Emotion Recognition</p>
-      <p class="pub-a">Zhang H., Huang H., <b>Zhao P.</b>, Zhu X., Yu Z.</p>
-      <p class="pub-v">Knowledge-Based Systems 304, 112499</p>
-    </div>
-    <span class="pub-badge bj">📘 Journal</span>
-  </div>
-
-  <div class="pub-card" data-type="j">
-    <div class="pub-yr">📅 2024</div>
-    <div>
-      <p class="pub-t">⭐ DiGAN Breakthrough: Advancing Diabetic Data Analysis with Innovative GAN-Based Imbalance Correction</p>
-      <p class="pub-a"><b>Zhao P.</b>, Liu X., Yue Z., Zhao Q., Liu X., Deng Y., Wu J.</p>
-      <p class="pub-v">Computer Methods and Programs in Biomedicine Update 5, 100152</p>
-    </div>
-    <span class="pub-badge bj">📘 Journal</span>
-  </div>
-
-  <div class="pub-card" data-type="c">
-    <div class="pub-yr">📅 2026</div>
-    <div>
-      <p class="pub-t">⭐ Promoting Structural Awareness and Empathy: Evaluation of a Poverty Simulation Intervention in Health Professions Education</p>
-      <p class="pub-a"><b>Zhao P.</b>, Carapucci T., Alford J., Kodakandla M.</p>
-      <p class="pub-v">30th Annual Conference of the International Association · 2026</p>
-    </div>
-    <span class="pub-badge bc">🎤 Conference</span>
-  </div>
-
-  <div class="pub-card" data-type="c">
-    <div class="pub-yr">📅 2025</div>
-    <div>
-      <p class="pub-t">⭐ Weighted Federated Learning with Encryption for Diabetes Classification</p>
-      <p class="pub-a"><b>Zhao P.</b>, Yue Z., Liu X., Wu J.</p>
-      <p class="pub-v">IEEE AIxMHC · Taiwan, 2025</p>
-    </div>
-    <span class="pub-badge bc">🎤 Conference</span>
-  </div>
-
-  <div class="pub-card" data-type="c">
-    <div class="pub-yr">📅 2022</div>
-    <div>
-      <p class="pub-t">⭐ An Attention-Based LSTM Framework for Detection of Bitcoin Scams</p>
-      <p class="pub-a"><b>Zhao P.</b>, Tian W., Xiao L., Liu X., Wu J.</p>
-      <p class="pub-v">IEEE HDIS · Tianjin, 2022</p>
-    </div>
-    <span class="pub-badge bb">🏆 Best Paper Nom.</span>
-  </div>
-
-  <div class="pub-card" data-type="c">
-    <div class="pub-yr">📅 2022</div>
-    <div>
-      <p class="pub-t">⭐ Prediction of Solar Power via Statistical and Machine Learning Methods</p>
-      <p class="pub-a"><b>Zhao P.</b>, Tian W.</p>
-      <p class="pub-v">IOP Conference Series: Earth and Environmental Science 1046(1), 012006 · Tokyo, 2022</p>
-    </div>
-    <span class="pub-badge bc">🎤 Conference</span>
-  </div>
-
+<div class="pub-card" data-type="j"><div class="pub-yr">2026</div><div><p class="pub-t">Demography-Aware Personalized Federated Learning for Fair, Private, and Efficient Clinical Risk Prediction</p><p class="pub-a"><b>Zhao P.</b>, Yue Z., Mi N., Zhang H.</p><p class="pub-v">Biomedical Signal Processing and Control 114, 109312</p></div><span class="pub-badge bj">Journal</span></div>
+<div class="pub-card" data-type="j"><div class="pub-yr">2026</div><div><p class="pub-t">Pre-attentive Speech Signal Processing with Adaptive Routing for Emotion Recognition</p><p class="pub-a">Zhang H., Pang Z., <b>Zhao P.</b>, Tang G., Shen L., Wang G.</p><p class="pub-v">Biomedical Signal Processing and Control 112, 108782</p></div><span class="pub-badge bj">Journal</span></div>
+<div class="pub-card" data-type="j"><div class="pub-yr">2025</div><div><p class="pub-t">Applied Statistical Methods for Identifying Features of Heart Rate Associated with Nicotine Vaping</p><p class="pub-a"><b>Zhao P.</b>, Yang J., Buu A.</p><p class="pub-v">The American Journal of Drug and Alcohol Abuse 51(2), 165–172</p></div><span class="pub-badge bj">Journal</span></div>
+<div class="pub-card" data-type="j"><div class="pub-yr">2025</div><div><p class="pub-t">Reproducible and Generalizable Speech Emotion Recognition via an Intelligent Fusion Network</p><p class="pub-a">Zhang H., <b>Zhao P.</b>, Tang G., Li Z., Yuan Z.</p><p class="pub-v">Biomedical Signal Processing and Control 109, 107996</p></div><span class="pub-badge bj">Journal</span></div>
+<div class="pub-card" data-type="j"><div class="pub-yr">2025</div><div><p class="pub-t">Sparse Temporal-Aware Capsule Network for Robust Speech Emotion Recognition</p><p class="pub-a">Zhang H., Huang H., <b>Zhao P.</b>, Yu Z.</p><p class="pub-v">Engineering Applications of Artificial Intelligence 144, 110060</p></div><span class="pub-badge bj">Journal</span></div>
+<div class="pub-card" data-type="j"><div class="pub-yr">2024</div><div><p class="pub-t">CENN: Capsule-Enhanced Neural Network with Innovative Metrics for Robust Speech Emotion Recognition</p><p class="pub-a">Zhang H., Huang H., <b>Zhao P.</b>, Zhu X., Yu Z.</p><p class="pub-v">Knowledge-Based Systems 304, 112499</p></div><span class="pub-badge bj">Journal</span></div>
+<div class="pub-card" data-type="j"><div class="pub-yr">2024</div><div><p class="pub-t">DiGAN Breakthrough: Advancing Diabetic Data Analysis with Innovative GAN-Based Imbalance Correction</p><p class="pub-a"><b>Zhao P.</b>, Liu X., Yue Z., Zhao Q., Liu X., Deng Y., Wu J.</p><p class="pub-v">Computer Methods and Programs in Biomedicine Update 5, 100152</p></div><span class="pub-badge bj">Journal</span></div>
+<div class="pub-card" data-type="c"><div class="pub-yr">2026</div><div><p class="pub-t">Promoting Structural Awareness and Empathy: Evaluation of a Poverty Simulation Intervention in Health Professions Education</p><p class="pub-a"><b>Zhao P.</b>, Carapucci T., Alford J., Kodakandla M.</p><p class="pub-v">30th Annual Conference of the International Association · 2026</p></div><span class="pub-badge bc">Conference</span></div>
+<div class="pub-card" data-type="c"><div class="pub-yr">2025</div><div><p class="pub-t">Weighted Federated Learning with Encryption for Diabetes Classification</p><p class="pub-a"><b>Zhao P.</b>, Yue Z., Liu X., Wu J.</p><p class="pub-v">IEEE AIxMHC · Taiwan, 2025</p></div><span class="pub-badge bc">Conference</span></div>
+<div class="pub-card" data-type="c"><div class="pub-yr">2022</div><div><p class="pub-t">An Attention-Based LSTM Framework for Detection of Bitcoin Scams</p><p class="pub-a"><b>Zhao P.</b>, Tian W., Xiao L., Liu X., Wu J.</p><p class="pub-v">IEEE HDIS · Tianjin, 2022</p></div><span class="pub-badge bb">🏆 Best Paper Nom.</span></div>
+<div class="pub-card" data-type="c"><div class="pub-yr">2022</div><div><p class="pub-t">Prediction of Solar Power via Statistical and Machine Learning Methods</p><p class="pub-a"><b>Zhao P.</b>, Tian W.</p><p class="pub-v">IOP Conference Series: Earth and Environmental Science 1046(1), 012006 · Tokyo, 2022</p></div><span class="pub-badge bc">Conference</span></div>
 </div>
 
 <div class="warm-section-title"><span>§</span> Contact</div>
