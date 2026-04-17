@@ -103,363 +103,191 @@ redirect_from:
 <p class="hero-bio">I am a <strong>Postdoctoral Associate</strong> at Rice University, working with Dr. Hanjie Chen. I earned my Ph.D. in Biostatistics from UTHealth Houston (advisors: Dr. James Yang, Dr. Anne Buu, Dr. Theresa Tran), M.Sc. from the University of Melbourne (Dr. Howard Bondell), and B.Sc. from Hong Kong Baptist University (Dr. Jingjing Wu). My work sits at the intersection of <strong>biostatistics</strong>, <strong>machine learning</strong>, and clinical applications.</p>
 </div>
 
-<section class="news-section">
-  <div class="warm-section-title"><span>§</span> News</div>
+<div class="warm-section-title"><span>§</span> News</div>
 
-  <div class="news-carousel-wrap">
-    <button class="news-nav prev" id="newsPrev" aria-label="Scroll left">‹</button>
+<ul class="news-list" id="newsList">
+  <li class="news-item">
+    <span class="news-date">Apr 23, 2026</span>
+    <p class="news-text">
+      Invited to present at <strong>CAPE Day 2026</strong> (Texas Children's Hospital, April 23) on the Poverty Simulator intervention in health professions education.
+      <span class="news-tag tag-talk">🎤 Talk</span>
+    </p>
+  </li>
 
-    <div class="news-carousel" id="newsCarousel">
+  <li class="news-item">
+    <span class="news-date">Apr 8, 2026</span>
+    <p class="news-text">
+      Paper accepted at <strong>IEEE EIT 2026</strong>: “Comparative Analysis of Shallow and Deep Learning Methods for Diabetes Prediction Using the Pima Indians Dataset”.
+      <span class="news-tag tag-paper">📄 Paper</span>
+    </p>
+  </li>
 
-      <article class="news-card">
-        <div class="news-card-date">Apr 23, 2026</div>
-        <div class="news-card-text">
-          Invited to present at <strong>CAPE Day 2026</strong> (Texas Children's Hospital, April 23) on the Poverty Simulator intervention in health professions education.
-        </div>
-        <span class="news-chip news-chip-talk">🎤 Talk</span>
-      </article>
+  <li class="news-item">
+    <span class="news-date">Mar 15, 2026</span>
+    <p class="news-text">
+      Oral presentation accepted at the <strong>30th Annual Conference of the International Association</strong>: “Promoting Structural Awareness and Empathy: Evaluation of a Poverty Simulation Intervention in Health Professions Education”.
+      <span class="news-tag tag-talk">🎤 Talk</span>
+    </p>
+  </li>
 
-      <article class="news-card">
-        <div class="news-card-date">Apr 8, 2026</div>
-        <div class="news-card-text">
-          Paper accepted at <strong>IEEE EIT 2026</strong>: “Comparative Analysis of Shallow and Deep Learning Methods for Diabetes Prediction Using the Pima Indians Dataset”.
-        </div>
-        <span class="news-chip news-chip-paper">📄 Paper</span>
-      </article>
+  <li class="news-item">
+    <span class="news-date">Feb 9, 2026</span>
+    <p class="news-text">
+      Joined <strong>Rice University</strong> as a Postdoctoral Associate in Computer Science, working with Dr. Hanjie Chen.
+      <span class="news-tag tag-misc">💼 New Role</span>
+    </p>
+  </li>
 
-      <article class="news-card">
-        <div class="news-card-date">Mar 15, 2026</div>
-        <div class="news-card-text">
-          Oral presentation accepted at the <strong>30th Annual Conference of the International Association</strong>: “Promoting Structural Awareness and Empathy: Evaluation of a Poverty Simulation Intervention in Health Professions Education”.
-        </div>
-        <span class="news-chip news-chip-talk">🎤 Talk</span>
-      </article>
+  <li class="news-item">
+    <span class="news-date">Dec 12, 2025</span>
+    <p class="news-text">
+      Awarded <strong>Ph.D. in Biostatistics</strong> (minor: Health Economics) from UTHealth Houston.
+      <span class="news-tag tag-award">🎓 Milestone</span>
+    </p>
+  </li>
 
-      <article class="news-card">
-        <div class="news-card-date">Feb 9, 2026</div>
-        <div class="news-card-text">
-          Joined <strong>Rice University</strong> as a Postdoctoral Associate in Computer Science, working with Dr. Hanjie Chen.
-        </div>
-        <span class="news-chip news-chip-misc">💼 New Role</span>
-      </article>
+  <li class="news-item">
+    <span class="news-date">Nov 29, 2025</span>
+    <p class="news-text">
+      Paper accepted in <em>Biomedical Signal Processing and Control</em>: “Demography-Aware Personalized Federated Learning for Fair, Private, and Efficient Clinical Risk Prediction”.
+      <span class="news-tag tag-paper">📄 Paper</span>
+    </p>
+  </li>
 
-      <article class="news-card">
-        <div class="news-card-date">Dec 12, 2025</div>
-        <div class="news-card-text">
-          Awarded <strong>Ph.D. in Biostatistics</strong> (minor: Health Economics) from UTHealth Houston.
-        </div>
-        <span class="news-chip news-chip-award">🎓 Milestone</span>
-      </article>
+  <li class="news-item">
+    <span class="news-date">Oct 1, 2025</span>
+    <p class="news-text">
+      Paper accepted in <em>Biomedical Signal Processing and Control</em>: “Pre-attentive Speech Signal Processing with Adaptive Routing for Emotion Recognition”.
+      <span class="news-tag tag-paper">📄 Paper</span>
+    </p>
+  </li>
 
-      <article class="news-card">
-        <div class="news-card-date">Nov 29, 2025</div>
-        <div class="news-card-text">
-          Paper accepted in <em>Biomedical Signal Processing and Control</em>: “Demography-Aware Personalized Federated Learning for Fair, Private, and Efficient Clinical Risk Prediction”.
-        </div>
-        <span class="news-chip news-chip-paper">📄 Paper</span>
-      </article>
+  <li class="news-item">
+    <span class="news-date">Jul 11, 2025</span>
+    <p class="news-text">
+      Paper accepted at <strong>IEEE AIxMHC 2025</strong> (Taiwan): “Weighted Federated Learning with Encryption for Diabetes Classification”.
+      <span class="news-tag tag-paper">📄 Paper</span>
+    </p>
+  </li>
 
-      <article class="news-card">
-        <div class="news-card-date">Oct 1, 2025</div>
-        <div class="news-card-text">
-          Paper accepted in <em>Biomedical Signal Processing and Control</em>: “Pre-attentive Speech Signal Processing with Adaptive Routing for Emotion Recognition”.
-        </div>
-        <span class="news-chip news-chip-paper">📄 Paper</span>
-      </article>
+  <li class="news-item">
+    <span class="news-date">Dec 10, 2024</span>
+    <p class="news-text">
+      Paper accepted in <em>The American Journal of Drug and Alcohol Abuse</em>: “Applied Statistical Methods for Identifying Features of Heart Rate Associated with Nicotine Vaping”.
+      <span class="news-tag tag-paper">📄 Paper</span>
+    </p>
+  </li>
+</ul>
 
-      <article class="news-card">
-        <div class="news-card-date">Jul 11, 2025</div>
-        <div class="news-card-text">
-          Paper accepted at <strong>IEEE AIxMHC 2025</strong> (Taiwan): “Weighted Federated Learning with Encryption for Diabetes Classification”.
-        </div>
-        <span class="news-chip news-chip-paper">📄 Paper</span>
-      </article>
+/* News */
+.news-list{
+  list-style:none;
+  padding:0;
+  margin:0.5em 0 1.1em;
+}
 
-      <article class="news-card">
-        <div class="news-card-date">Dec 10, 2024</div>
-        <div class="news-card-text">
-          Paper accepted in <em>The American Journal of Drug and Alcohol Abuse</em>: “Applied Statistical Methods for Identifying Features of Heart Rate Associated with Nicotine Vaping”.
-        </div>
-        <span class="news-chip news-chip-paper">📄 Paper</span>
-      </article>
+.news-item{
+  display:grid;
+  grid-template-columns:92px 1fr;
+  gap:14px;
+  align-items:start;
+  padding:10px 0;
+  border-bottom:1px solid #f0f0f0;
+  transition:opacity 0.4s ease, transform 0.2s ease;
+  opacity:0;
+}
 
-    </div>
+.news-item.visible{
+  opacity:1;
+}
 
-    <button class="news-nav next" id="newsNext" aria-label="Scroll right">›</button>
-  </div>
-</section>
+.news-item:last-child{
+  border-bottom:none;
+}
 
-<style>
-  .news-section{
-    margin: 0.8em 0 1.6em;
+.news-item:hover{
+  transform:translateX(2px);
+}
+
+.news-date{
+  font-size:0.73em;
+  font-weight:600;
+  color:#c0613a;
+  padding-top:2px;
+  white-space:nowrap;
+}
+
+.news-text{
+  font-size:0.83em;
+  color:#333;
+  line-height:1.65;
+  margin:0;
+}
+
+.news-text strong{
+  color:#1f1f1f;
+}
+
+.news-text em{
+  color:#555;
+}
+
+.news-tag{
+  display:inline-block;
+  font-size:0.64em;
+  font-weight:600;
+  padding:2px 7px;
+  border-radius:999px;
+  margin-left:6px;
+  vertical-align:middle;
+  letter-spacing:0.1px;
+}
+
+.tag-paper{
+  background:#edf7ee;
+  color:#2e7d32;
+  border:1px solid #c8e6c9;
+}
+
+.tag-award{
+  background:#fdf6e3;
+  color:#b45309;
+  border:1px solid #fde68a;
+}
+
+.tag-talk{
+  background:#e8f1fb;
+  color:#1565c0;
+  border:1px solid #bbdefb;
+}
+
+.tag-service{
+  background:#f5f0fa;
+  color:#6a1b9a;
+  border:1px solid #e1bee7;
+}
+
+.tag-misc{
+  background:#f5f5f5;
+  color:#555;
+  border:1px solid #ddd;
+}
+
+@media (max-width: 640px){
+  .news-item{
+    grid-template-columns:1fr;
+    gap:4px;
   }
 
-  .news-carousel-wrap{
-    position: relative;
-    display: flex;
-    align-items: center;
+  .news-date{
+    padding-top:0;
   }
 
-  .news-carousel{
-    display: flex;
-    gap: 16px;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
-    -webkit-overflow-scrolling: touch;
-    width: 100%;
-    padding: 8px 6px 16px;
-    scrollbar-width: none;
-    cursor: grab;
+  .news-tag{
+    margin-left:0;
+    margin-top:6px;
   }
-
-  .news-carousel::-webkit-scrollbar{
-    display: none;
-  }
-
-  .news-carousel:active{
-    cursor: grabbing;
-  }
-
-  .news-card{
-    flex: 0 0 340px;
-    scroll-snap-align: start;
-    background: linear-gradient(180deg, #fffdfb 0%, #fff8f2 100%);
-    border: 1px solid #eadfd2;
-    border-radius: 18px;
-    padding: 16px 16px 14px;
-    box-shadow: 0 6px 20px rgba(93, 67, 42, 0.08);
-    transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease, opacity 0.4s ease;
-    min-height: 198px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    opacity: 0;
-  }
-
-  .news-card.visible{
-    opacity: 1;
-  }
-
-  .news-card:hover{
-    transform: translateY(-3px);
-    box-shadow: 0 12px 28px rgba(93, 67, 42, 0.12);
-    border-color: #dcc8b3;
-  }
-
-  .news-card-date{
-    display: inline-flex;
-    align-items: center;
-    width: fit-content;
-    font-size: 0.78em;
-    font-weight: 600;
-    color: #9a7a60;
-    background: #f7eee6;
-    border: 1px solid #efe1d5;
-    border-radius: 999px;
-    padding: 5px 10px;
-    margin-bottom: 12px;
-  }
-
-  .news-card-text{
-    color: #3d342d;
-    font-size: 0.84em;
-    line-height: 1.65;
-    margin-bottom: 14px;
-  }
-
-  .news-card-text strong{
-    color: #2f241c;
-  }
-
-  .news-card-text em{
-    color: #4a3a31;
-    font-style: italic;
-  }
-
-  .news-chip{
-    display: inline-flex;
-    align-items: center;
-    gap: 0.35rem;
-    width: fit-content;
-    font-size: 0.68em;
-    font-weight: 600;
-    padding: 5px 10px;
-    border-radius: 999px;
-    letter-spacing: 0.12px;
-  }
-
-  .news-chip-paper{
-    background: #edf7ee;
-    color: #2e7d32;
-    border: 1px solid #c8e6c9;
-  }
-
-  .news-chip-talk{
-    background: #e8f1fb;
-    color: #1565c0;
-    border: 1px solid #bbdefb;
-  }
-
-  .news-chip-award{
-    background: #fdf6e3;
-    color: #b45309;
-    border: 1px solid #fde68a;
-  }
-
-  .news-chip-misc{
-    background: #f5f5f5;
-    color: #555;
-    border: 1px solid #ddd;
-  }
-
-  .news-nav{
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 3;
-    width: 40px;
-    height: 40px;
-    border: none;
-    border-radius: 50%;
-    background: rgba(255, 250, 245, 0.95);
-    color: #6f533e;
-    box-shadow: 0 6px 16px rgba(70, 50, 35, 0.14);
-    font-size: 1.7rem;
-    line-height: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    transition: all 0.2s ease;
-  }
-
-  .news-nav:hover{
-    background: #fff;
-    transform: translateY(-50%) scale(1.05);
-  }
-
-  .news-nav:disabled{
-    opacity: 0.3;
-    cursor: not-allowed;
-    transform: translateY(-50%);
-  }
-
-  .news-nav.prev{
-    left: -8px;
-  }
-
-  .news-nav.next{
-    right: -8px;
-  }
-
-  .news-carousel-wrap::before,
-  .news-carousel-wrap::after{
-    content: "";
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    width: 34px;
-    z-index: 2;
-    pointer-events: none;
-  }
-
-  .news-carousel-wrap::before{
-    left: 0;
-    background: linear-gradient(to right, rgba(255,255,255,0.94), rgba(255,255,255,0));
-  }
-
-  .news-carousel-wrap::after{
-    right: 0;
-    background: linear-gradient(to left, rgba(255,255,255,0.94), rgba(255,255,255,0));
-  }
-
-  @media (max-width: 900px){
-    .news-card{
-      flex: 0 0 300px;
-      min-height: 208px;
-    }
-  }
-
-  @media (max-width: 640px){
-    .news-card{
-      flex: 0 0 86%;
-      min-height: auto;
-    }
-
-    .news-nav{
-      width: 36px;
-      height: 36px;
-      font-size: 1.45rem;
-    }
-
-    .news-carousel-wrap::before,
-    .news-carousel-wrap::after{
-      width: 16px;
-    }
-  }
-</style>
-
-<script>
-(function () {
-  const carousel = document.getElementById('newsCarousel');
-  const prevBtn = document.getElementById('newsPrev');
-  const nextBtn = document.getElementById('newsNext');
-
-  if (!carousel || !prevBtn || !nextBtn) return;
-
-  function getScrollAmount() {
-    const card = carousel.querySelector('.news-card');
-    if (!card) return 300;
-    return card.offsetWidth + 16;
-  }
-
-  function updateButtons() {
-    const maxScrollLeft = carousel.scrollWidth - carousel.clientWidth;
-    prevBtn.disabled = carousel.scrollLeft <= 5;
-    nextBtn.disabled = carousel.scrollLeft >= maxScrollLeft - 5;
-  }
-
-  prevBtn.addEventListener('click', () => {
-    carousel.scrollBy({ left: -getScrollAmount(), behavior: 'smooth' });
-  });
-
-  nextBtn.addEventListener('click', () => {
-    carousel.scrollBy({ left: getScrollAmount(), behavior: 'smooth' });
-  });
-
-  carousel.addEventListener('scroll', updateButtons);
-  window.addEventListener('resize', updateButtons);
-
-  let isDown = false;
-  let startX = 0;
-  let scrollLeft = 0;
-
-  carousel.addEventListener('mousedown', (e) => {
-    isDown = true;
-    startX = e.pageX - carousel.offsetLeft;
-    scrollLeft = carousel.scrollLeft;
-  });
-
-  carousel.addEventListener('mouseleave', () => {
-    isDown = false;
-  });
-
-  carousel.addEventListener('mouseup', () => {
-    isDown = false;
-  });
-
-  carousel.addEventListener('mousemove', (e) => {
-    if (!isDown) return;
-    e.preventDefault();
-    const x = e.pageX - carousel.offsetLeft;
-    const walk = (x - startX) * 1.15;
-    carousel.scrollLeft = scrollLeft - walk;
-  });
-
-  updateButtons();
-})();
-</script>
+}
 <div class="warm-section-title"><span>§</span> Education</div>
 <div class="edu-timeline">
 <div class="edu-item"><div class="edu-period">2026 – Present</div><div><p class="edu-degree">Postdoctoral Associate in Computer Science</p><p class="edu-school">Rice University, Houston, TX</p><p class="edu-advisor">Advisor: Dr. Hanjie Chen</p></div></div>
@@ -629,7 +457,7 @@ redirect_from:
   }, {threshold: 0.1, rootMargin: '0px 0px -30px 0px'});
 
   function init(){
-    document.querySelectorAll('.r-card, .edu-item, .pub-card, .news-card').forEach(function(el){
+    document.querySelectorAll('.r-card, .edu-item, .pub-card, .news-item').forEach(function(el){
       observer.observe(el);
     });
   }
