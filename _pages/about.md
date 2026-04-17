@@ -77,109 +77,6 @@ redirect_from:
 .photo-strip img:hover { opacity: 0.85; }
 
 /* News */
-.news-list { list-style: none; padding: 0; margin: 0.4em 0 1em; }
-.news-item { display: flex; gap: 12px; align-items: baseline; padding: 6px 0; border-bottom: 1px solid #f0f0f0; transition: opacity 0.4s ease; opacity: 0; }
-.news-item.visible { opacity: 1; }
-.news-item:last-child { border-bottom: none; }
-.news-date { flex-shrink: 0; font-size: 0.72em; font-weight: 600; color: #c0613a; width: 82px; }
-.news-text { font-size: 0.83em; color: #333; line-height: 1.55; margin: 0; }
-.news-text a { color: #c0613a; text-decoration: none; font-weight: 500; }
-.news-text a:hover { text-decoration: underline; }
-.news-tag { display: inline-block; font-size: 0.65em; font-weight: 600; padding: 1px 6px; border-radius: 3px; margin-left: 5px; vertical-align: middle; }
-.tag-paper { background: #edf7ee; color: #2e7d32; border: 1px solid #c8e6c9; }
-.tag-award { background: #fdf6e3; color: #b45309; border: 1px solid #fde68a; }
-.tag-talk { background: #e8f1fb; color: #1565c0; border: 1px solid #bbdefb; }
-.tag-service { background: #f5f0fa; color: #6a1b9a; border: 1px solid #e1bee7; }
-.tag-misc { background: #f5f5f5; color: #555; border: 1px solid #ddd; }
-</style>
-
-<div class="hero-banner">
-<div class="hero-greeting">Puyang Zhao</div>
-<div class="hero-pills">
-<span class="hero-pill">Postdoctoral Associate · Rice University</span>
-<span class="hero-pill">Houston, TX</span>
-<span class="hero-pill">she/her</span>
-</div>
-<p class="hero-bio">I am a <strong>Postdoctoral Associate</strong> at Rice University, working with Dr. Hanjie Chen. I earned my Ph.D. in Biostatistics from UTHealth Houston (advisors: Dr. James Yang, Dr. Anne Buu, Dr. Theresa Tran), M.Sc. from the University of Melbourne (Dr. Howard Bondell), and B.Sc. from Hong Kong Baptist University (Dr. Jingjing Wu). My work sits at the intersection of <strong>biostatistics</strong>, <strong>machine learning</strong>, and clinical applications.</p>
-</div>
-
-<div class="warm-section-title"><span>§</span> News</div>
-
-<ul class="news-list" id="newsList">
-  <li class="news-item">
-    <span class="news-date">Apr 23, 2026</span>
-    <p class="news-text">
-      Invited to present at <strong>CAPE Day 2026</strong> (Texas Children's Hospital, April 23) on the Poverty Simulator intervention in health professions education.
-      <span class="news-tag tag-talk">🎤 Talk</span>
-    </p>
-  </li>
-
-  <li class="news-item">
-    <span class="news-date">Apr 8, 2026</span>
-    <p class="news-text">
-      Paper accepted at <strong>IEEE EIT 2026</strong>: “Comparative Analysis of Shallow and Deep Learning Methods for Diabetes Prediction Using the Pima Indians Dataset”.
-      <span class="news-tag tag-paper">📄 Paper</span>
-    </p>
-  </li>
-
-  <li class="news-item">
-    <span class="news-date">Mar 15, 2026</span>
-    <p class="news-text">
-      Oral presentation accepted at the <strong>30th Annual Conference of the International Association</strong>: “Promoting Structural Awareness and Empathy: Evaluation of a Poverty Simulation Intervention in Health Professions Education”.
-      <span class="news-tag tag-talk">🎤 Talk</span>
-    </p>
-  </li>
-
-  <li class="news-item">
-    <span class="news-date">Feb 9, 2026</span>
-    <p class="news-text">
-      Joined <strong>Rice University</strong> as a Postdoctoral Associate in Computer Science, working with Dr. Hanjie Chen.
-      <span class="news-tag tag-misc">💼 New Role</span>
-    </p>
-  </li>
-
-  <li class="news-item">
-    <span class="news-date">Dec 12, 2025</span>
-    <p class="news-text">
-      Awarded <strong>Ph.D. in Biostatistics</strong> (minor: Health Economics) from UTHealth Houston.
-      <span class="news-tag tag-award">🎓 Milestone</span>
-    </p>
-  </li>
-
-  <li class="news-item">
-    <span class="news-date">Nov 29, 2025</span>
-    <p class="news-text">
-      Paper accepted in <em>Biomedical Signal Processing and Control</em>: “Demography-Aware Personalized Federated Learning for Fair, Private, and Efficient Clinical Risk Prediction”.
-      <span class="news-tag tag-paper">📄 Paper</span>
-    </p>
-  </li>
-
-  <li class="news-item">
-    <span class="news-date">Oct 1, 2025</span>
-    <p class="news-text">
-      Paper accepted in <em>Biomedical Signal Processing and Control</em>: “Pre-attentive Speech Signal Processing with Adaptive Routing for Emotion Recognition”.
-      <span class="news-tag tag-paper">📄 Paper</span>
-    </p>
-  </li>
-
-  <li class="news-item">
-    <span class="news-date">Jul 11, 2025</span>
-    <p class="news-text">
-      Paper accepted at <strong>IEEE AIxMHC 2025</strong> (Taiwan): “Weighted Federated Learning with Encryption for Diabetes Classification”.
-      <span class="news-tag tag-paper">📄 Paper</span>
-    </p>
-  </li>
-
-  <li class="news-item">
-    <span class="news-date">Dec 10, 2024</span>
-    <p class="news-text">
-      Paper accepted in <em>The American Journal of Drug and Alcohol Abuse</em>: “Applied Statistical Methods for Identifying Features of Heart Rate Associated with Nicotine Vaping”.
-      <span class="news-tag tag-paper">📄 Paper</span>
-    </p>
-  </li>
-</ul>
-
-/* News */
 .news-list{
   list-style:none;
   padding:0;
@@ -288,6 +185,95 @@ redirect_from:
     margin-top:6px;
   }
 }
+</style>
+
+<div class="hero-banner">
+<div class="hero-greeting">Puyang Zhao</div>
+<div class="hero-pills">
+<span class="hero-pill">Postdoctoral Associate · Rice University</span>
+<span class="hero-pill">Houston, TX</span>
+<span class="hero-pill">she/her</span>
+</div>
+<p class="hero-bio">I am a <strong>Postdoctoral Associate</strong> at Rice University, working with Dr. Hanjie Chen. I earned my Ph.D. in Biostatistics from UTHealth Houston (advisors: Dr. James Yang, Dr. Anne Buu, Dr. Theresa Tran), M.Sc. from the University of Melbourne (Dr. Howard Bondell), and B.Sc. from Hong Kong Baptist University (Dr. Jingjing Wu). My work sits at the intersection of <strong>biostatistics</strong>, <strong>machine learning</strong>, and clinical applications.</p>
+</div>
+
+<div class="warm-section-title"><span>§</span> News</div>
+
+<ul class="news-list" id="newsList">
+  <li class="news-item">
+    <span class="news-date">Apr 23, 2026</span>
+    <p class="news-text">
+      Invited to present at <strong>CAPE Day 2026</strong> (Texas Children's Hospital, April 23) on the Poverty Simulator intervention in health professions education.
+      <span class="news-tag tag-talk">🎤 Talk</span>
+    </p>
+  </li>
+
+  <li class="news-item">
+    <span class="news-date">Apr 8, 2026</span>
+    <p class="news-text">
+      Paper accepted at <strong>IEEE EIT 2026</strong>: “Comparative Analysis of Shallow and Deep Learning Methods for Diabetes Prediction Using the Pima Indians Dataset”.
+      <span class="news-tag tag-paper">📄 Paper</span>
+    </p>
+  </li>
+
+  <li class="news-item">
+    <span class="news-date">Mar 15, 2026</span>
+    <p class="news-text">
+      Oral presentation accepted at the <strong>30th Annual Conference of the International Association</strong>: “Promoting Structural Awareness and Empathy: Evaluation of a Poverty Simulation Intervention in Health Professions Education”.
+      <span class="news-tag tag-talk">🎤 Talk</span>
+    </p>
+  </li>
+
+  <li class="news-item">
+    <span class="news-date">Feb 9, 2026</span>
+    <p class="news-text">
+      Joined <strong>Rice University</strong> as a Postdoctoral Associate in Computer Science, working with Dr. Hanjie Chen.
+      <span class="news-tag tag-misc">💼 New Role</span>
+    </p>
+  </li>
+
+  <li class="news-item">
+    <span class="news-date">Dec 12, 2025</span>
+    <p class="news-text">
+      Awarded <strong>Ph.D. in Biostatistics</strong> (minor: Health Economics) from UTHealth Houston.
+      <span class="news-tag tag-award">🎓 Milestone</span>
+    </p>
+  </li>
+
+  <li class="news-item">
+    <span class="news-date">Nov 29, 2025</span>
+    <p class="news-text">
+      Paper accepted in <em>Biomedical Signal Processing and Control</em>: “Demography-Aware Personalized Federated Learning for Fair, Private, and Efficient Clinical Risk Prediction”.
+      <span class="news-tag tag-paper">📄 Paper</span>
+    </p>
+  </li>
+
+  <li class="news-item">
+    <span class="news-date">Oct 1, 2025</span>
+    <p class="news-text">
+      Paper accepted in <em>Biomedical Signal Processing and Control</em>: “Pre-attentive Speech Signal Processing with Adaptive Routing for Emotion Recognition”.
+      <span class="news-tag tag-paper">📄 Paper</span>
+    </p>
+  </li>
+
+  <li class="news-item">
+    <span class="news-date">Jul 11, 2025</span>
+    <p class="news-text">
+      Paper accepted at <strong>IEEE AIxMHC 2025</strong> (Taiwan): “Weighted Federated Learning with Encryption for Diabetes Classification”.
+      <span class="news-tag tag-paper">📄 Paper</span>
+    </p>
+  </li>
+
+  <li class="news-item">
+    <span class="news-date">Dec 10, 2024</span>
+    <p class="news-text">
+      Paper accepted in <em>The American Journal of Drug and Alcohol Abuse</em>: “Applied Statistical Methods for Identifying Features of Heart Rate Associated with Nicotine Vaping”.
+      <span class="news-tag tag-paper">📄 Paper</span>
+    </p>
+  </li>
+</ul>
+
+
 <div class="warm-section-title"><span>§</span> Education</div>
 <div class="edu-timeline">
 <div class="edu-item"><div class="edu-period">2026 – Present</div><div><p class="edu-degree">Postdoctoral Associate in Computer Science</p><p class="edu-school">Rice University, Houston, TX</p><p class="edu-advisor">Advisor: Dr. Hanjie Chen</p></div></div>
