@@ -140,18 +140,217 @@ redirect_from:
 <button class="pub-tab" onclick="filterPubs('j',this)">Journal Articles</button>
 <button class="pub-tab" onclick="filterPubs('c',this)">Conference</button>
 </div>
+<style>
+  #pubContainer{
+    display:flex;
+    flex-direction:column;
+    gap:14px;
+    margin-top:12px;
+    font-family: "Inter", "Segoe UI", Arial, sans-serif;
+  }
+
+  .pub-card{
+    display:grid;
+    grid-template-columns:90px 1fr auto;
+    gap:16px;
+    align-items:start;
+    padding:16px 18px;
+    border:1px solid #e8e8e8;
+    border-radius:16px;
+    background:#fff;
+    box-shadow:0 2px 10px rgba(0,0,0,0.04);
+    transition:transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+  }
+
+  .pub-card:hover{
+    transform:translateY(-2px);
+    box-shadow:0 8px 22px rgba(0,0,0,0.08);
+    border-color:#d8d8d8;
+  }
+
+  .pub-yr{
+    font-size:0.95rem;
+    font-weight:700;
+    color:#4b5563;
+    white-space:nowrap;
+    padding-top:2px;
+  }
+
+  .pub-t{
+    margin:0 0 8px 0;
+    font-size:1.02rem;
+    font-weight:700;
+    line-height:1.45;
+    color:#111827;
+  }
+
+  .pub-a{
+    margin:0 0 6px 0;
+    font-size:0.95rem;
+    line-height:1.5;
+    color:#374151;
+  }
+
+  .pub-v{
+    margin:0;
+    font-size:0.92rem;
+    line-height:1.5;
+    color:#6b7280;
+    font-style:italic;
+  }
+
+  .pub-badge{
+    align-self:start;
+    display:inline-flex;
+    align-items:center;
+    gap:6px;
+    font-size:0.82rem;
+    font-weight:700;
+    padding:7px 12px;
+    border-radius:999px;
+    white-space:nowrap;
+    letter-spacing:0.2px;
+  }
+
+  .bj{
+    background:#eaf2ff;
+    color:#1d4ed8;
+  }
+
+  .bc{
+    background:#ecfdf5;
+    color:#047857;
+  }
+
+  .bb{
+    background:#fff7ed;
+    color:#c2410c;
+  }
+
+  @media (max-width: 760px){
+    .pub-card{
+      grid-template-columns:1fr;
+      gap:10px;
+    }
+
+    .pub-badge{
+      justify-self:start;
+    }
+  }
+</style>
+
 <div id="pubContainer">
-<div class="pub-card" data-type="j"><div class="pub-yr">2026</div><div><p class="pub-t">Demography-Aware Personalized Federated Learning for Fair, Private, and Efficient Clinical Risk Prediction</p><p class="pub-a"><b>Zhao P.</b>, Yue Z., Mi N., Zhang H.</p><p class="pub-v">Biomedical Signal Processing and Control 114, 109312</p></div><span class="pub-badge bj">Journal</span></div>
-<div class="pub-card" data-type="j"><div class="pub-yr">2026</div><div><p class="pub-t">Pre-attentive Speech Signal Processing with Adaptive Routing for Emotion Recognition</p><p class="pub-a">Zhang H., Pang Z., <b>Zhao P.</b>, Tang G., Shen L., Wang G.</p><p class="pub-v">Biomedical Signal Processing and Control 112, 108782</p></div><span class="pub-badge bj">Journal</span></div>
-<div class="pub-card" data-type="j"><div class="pub-yr">2025</div><div><p class="pub-t">Applied Statistical Methods for Identifying Features of Heart Rate Associated with Nicotine Vaping</p><p class="pub-a"><b>Zhao P.</b>, Yang J., Buu A.</p><p class="pub-v">The American Journal of Drug and Alcohol Abuse 51(2), 165–172</p></div><span class="pub-badge bj">Journal</span></div>
-<div class="pub-card" data-type="j"><div class="pub-yr">2025</div><div><p class="pub-t">Reproducible and Generalizable Speech Emotion Recognition via an Intelligent Fusion Network</p><p class="pub-a">Zhang H., <b>Zhao P.</b>, Tang G., Li Z., Yuan Z.</p><p class="pub-v">Biomedical Signal Processing and Control 109, 107996</p></div><span class="pub-badge bj">Journal</span></div>
-<div class="pub-card" data-type="j"><div class="pub-yr">2025</div><div><p class="pub-t">Sparse Temporal-Aware Capsule Network for Robust Speech Emotion Recognition</p><p class="pub-a">Zhang H., Huang H., <b>Zhao P.</b>, Yu Z.</p><p class="pub-v">Engineering Applications of Artificial Intelligence 144, 110060</p></div><span class="pub-badge bj">Journal</span></div>
-<div class="pub-card" data-type="j"><div class="pub-yr">2024</div><div><p class="pub-t">CENN: Capsule-Enhanced Neural Network with Innovative Metrics for Robust Speech Emotion Recognition</p><p class="pub-a">Zhang H., Huang H., <b>Zhao P.</b>, Zhu X., Yu Z.</p><p class="pub-v">Knowledge-Based Systems 304, 112499</p></div><span class="pub-badge bj">Journal</span></div>
-<div class="pub-card" data-type="j"><div class="pub-yr">2024</div><div><p class="pub-t">DiGAN Breakthrough: Advancing Diabetic Data Analysis with Innovative GAN-Based Imbalance Correction</p><p class="pub-a"><b>Zhao P.</b>, Liu X., Yue Z., Zhao Q., Liu X., Deng Y., Wu J.</p><p class="pub-v">Computer Methods and Programs in Biomedicine Update 5, 100152</p></div><span class="pub-badge bj">Journal</span></div>
-<div class="pub-card" data-type="c"><div class="pub-yr">2026</div><div><p class="pub-t">Promoting Structural Awareness and Empathy: Evaluation of a Poverty Simulation Intervention in Health Professions Education</p><p class="pub-a"><b>Zhao P.</b>, Carapucci T., Alford J., Kodakandla M.</p><p class="pub-v">30th Annual Conference of the International Association · 2026</p></div><span class="pub-badge bc">Conference</span></div>
-<div class="pub-card" data-type="c"><div class="pub-yr">2025</div><div><p class="pub-t">Weighted Federated Learning with Encryption for Diabetes Classification</p><p class="pub-a"><b>Zhao P.</b>, Yue Z., Liu X., Wu J.</p><p class="pub-v">IEEE AIxMHC · Taiwan, 2025</p></div><span class="pub-badge bc">Conference</span></div>
-<div class="pub-card" data-type="c"><div class="pub-yr">2022</div><div><p class="pub-t">An Attention-Based LSTM Framework for Detection of Bitcoin Scams</p><p class="pub-a"><b>Zhao P.</b>, Tian W., Xiao L., Liu X., Wu J.</p><p class="pub-v">IEEE HDIS · Tianjin, 2022</p></div><span class="pub-badge bb">🏆 Best Paper Nom.</span></div>
-<div class="pub-card" data-type="c"><div class="pub-yr">2022</div><div><p class="pub-t">Prediction of Solar Power via Statistical and Machine Learning Methods</p><p class="pub-a"><b>Zhao P.</b>, Tian W.</p><p class="pub-v">IOP Conference Series: Earth and Environmental Science 1046(1), 012006 · Tokyo, 2022</p></div><span class="pub-badge bc">Conference</span></div>
+
+  <div class="pub-card" data-type="j">
+    <div class="pub-yr">📅 2026</div>
+    <div>
+      <p class="pub-t">⭐ Demography-Aware Personalized Federated Learning for Fair, Private, and Efficient Clinical Risk Prediction</p>
+      <p class="pub-a"><b>Zhao P.</b>, Yue Z., Mi N., Zhang H.</p>
+      <p class="pub-v">Biomedical Signal Processing and Control 114, 109312</p>
+    </div>
+    <span class="pub-badge bj">📘 Journal</span>
+  </div>
+
+  <div class="pub-card" data-type="j">
+    <div class="pub-yr">📅 2026</div>
+    <div>
+      <p class="pub-t">Pre-attentive Speech Signal Processing with Adaptive Routing for Emotion Recognition</p>
+      <p class="pub-a">Zhang H., Pang Z., <b>Zhao P.</b>, Tang G., Shen L., Wang G.</p>
+      <p class="pub-v">Biomedical Signal Processing and Control 112, 108782</p>
+    </div>
+    <span class="pub-badge bj">📘 Journal</span>
+  </div>
+
+  <div class="pub-card" data-type="j">
+    <div class="pub-yr">📅 2025</div>
+    <div>
+      <p class="pub-t">⭐ Applied Statistical Methods for Identifying Features of Heart Rate Associated with Nicotine Vaping</p>
+      <p class="pub-a"><b>Zhao P.</b>, Yang J., Buu A.</p>
+      <p class="pub-v">The American Journal of Drug and Alcohol Abuse 51(2), 165–172</p>
+    </div>
+    <span class="pub-badge bj">📘 Journal</span>
+  </div>
+
+  <div class="pub-card" data-type="j">
+    <div class="pub-yr">📅 2025</div>
+    <div>
+      <p class="pub-t">Reproducible and Generalizable Speech Emotion Recognition via an Intelligent Fusion Network</p>
+      <p class="pub-a">Zhang H., <b>Zhao P.</b>, Tang G., Li Z., Yuan Z.</p>
+      <p class="pub-v">Biomedical Signal Processing and Control 109, 107996</p>
+    </div>
+    <span class="pub-badge bj">📘 Journal</span>
+  </div>
+
+  <div class="pub-card" data-type="j">
+    <div class="pub-yr">📅 2025</div>
+    <div>
+      <p class="pub-t">Sparse Temporal-Aware Capsule Network for Robust Speech Emotion Recognition</p>
+      <p class="pub-a">Zhang H., Huang H., <b>Zhao P.</b>, Yu Z.</p>
+      <p class="pub-v">Engineering Applications of Artificial Intelligence 144, 110060</p>
+    </div>
+    <span class="pub-badge bj">📘 Journal</span>
+  </div>
+
+  <div class="pub-card" data-type="j">
+    <div class="pub-yr">📅 2024</div>
+    <div>
+      <p class="pub-t">CENN: Capsule-Enhanced Neural Network with Innovative Metrics for Robust Speech Emotion Recognition</p>
+      <p class="pub-a">Zhang H., Huang H., <b>Zhao P.</b>, Zhu X., Yu Z.</p>
+      <p class="pub-v">Knowledge-Based Systems 304, 112499</p>
+    </div>
+    <span class="pub-badge bj">📘 Journal</span>
+  </div>
+
+  <div class="pub-card" data-type="j">
+    <div class="pub-yr">📅 2024</div>
+    <div>
+      <p class="pub-t">⭐ DiGAN Breakthrough: Advancing Diabetic Data Analysis with Innovative GAN-Based Imbalance Correction</p>
+      <p class="pub-a"><b>Zhao P.</b>, Liu X., Yue Z., Zhao Q., Liu X., Deng Y., Wu J.</p>
+      <p class="pub-v">Computer Methods and Programs in Biomedicine Update 5, 100152</p>
+    </div>
+    <span class="pub-badge bj">📘 Journal</span>
+  </div>
+
+  <div class="pub-card" data-type="c">
+    <div class="pub-yr">📅 2026</div>
+    <div>
+      <p class="pub-t">⭐ Promoting Structural Awareness and Empathy: Evaluation of a Poverty Simulation Intervention in Health Professions Education</p>
+      <p class="pub-a"><b>Zhao P.</b>, Carapucci T., Alford J., Kodakandla M.</p>
+      <p class="pub-v">30th Annual Conference of the International Association · 2026</p>
+    </div>
+    <span class="pub-badge bc">🎤 Conference</span>
+  </div>
+
+  <div class="pub-card" data-type="c">
+    <div class="pub-yr">📅 2025</div>
+    <div>
+      <p class="pub-t">⭐ Weighted Federated Learning with Encryption for Diabetes Classification</p>
+      <p class="pub-a"><b>Zhao P.</b>, Yue Z., Liu X., Wu J.</p>
+      <p class="pub-v">IEEE AIxMHC · Taiwan, 2025</p>
+    </div>
+    <span class="pub-badge bc">🎤 Conference</span>
+  </div>
+
+  <div class="pub-card" data-type="c">
+    <div class="pub-yr">📅 2022</div>
+    <div>
+      <p class="pub-t">⭐ An Attention-Based LSTM Framework for Detection of Bitcoin Scams</p>
+      <p class="pub-a"><b>Zhao P.</b>, Tian W., Xiao L., Liu X., Wu J.</p>
+      <p class="pub-v">IEEE HDIS · Tianjin, 2022</p>
+    </div>
+    <span class="pub-badge bb">🏆 Best Paper Nom.</span>
+  </div>
+
+  <div class="pub-card" data-type="c">
+    <div class="pub-yr">📅 2022</div>
+    <div>
+      <p class="pub-t">⭐ Prediction of Solar Power via Statistical and Machine Learning Methods</p>
+      <p class="pub-a"><b>Zhao P.</b>, Tian W.</p>
+      <p class="pub-v">IOP Conference Series: Earth and Environmental Science 1046(1), 012006 · Tokyo, 2022</p>
+    </div>
+    <span class="pub-badge bc">🎤 Conference</span>
+  </div>
+
 </div>
 
 <div class="warm-section-title"><span>§</span> Contact</div>
