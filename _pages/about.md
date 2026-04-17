@@ -104,9 +104,7 @@ redirect_from:
 </div>
 
 <section class="news-section">
-  <div class="warm-section-title">
-    <span>📰</span> News
-  </div>
+  <div class="warm-section-title"><span>§</span> News</div>
 
   <div class="news-carousel-wrap">
     <button class="news-nav prev" id="newsPrev" aria-label="Scroll left">‹</button>
@@ -118,7 +116,7 @@ redirect_from:
         <div class="news-card-text">
           Invited to present at <strong>CAPE Day 2026</strong> (Texas Children's Hospital, April 23) on the Poverty Simulator intervention in health professions education.
         </div>
-        <span class="news-tag tag-talk">🎤 Talk</span>
+        <span class="news-chip news-chip-talk">🎤 Talk</span>
       </article>
 
       <article class="news-card">
@@ -126,7 +124,7 @@ redirect_from:
         <div class="news-card-text">
           Paper accepted at <strong>IEEE EIT 2026</strong>: “Comparative Analysis of Shallow and Deep Learning Methods for Diabetes Prediction Using the Pima Indians Dataset”.
         </div>
-        <span class="news-tag tag-paper">📄 Paper</span>
+        <span class="news-chip news-chip-paper">📄 Paper</span>
       </article>
 
       <article class="news-card">
@@ -134,7 +132,7 @@ redirect_from:
         <div class="news-card-text">
           Oral presentation accepted at the <strong>30th Annual Conference of the International Association</strong>: “Promoting Structural Awareness and Empathy: Evaluation of a Poverty Simulation Intervention in Health Professions Education”.
         </div>
-        <span class="news-tag tag-talk">🎤 Talk</span>
+        <span class="news-chip news-chip-talk">🎤 Talk</span>
       </article>
 
       <article class="news-card">
@@ -142,7 +140,7 @@ redirect_from:
         <div class="news-card-text">
           Joined <strong>Rice University</strong> as a Postdoctoral Associate in Computer Science, working with Dr. Hanjie Chen.
         </div>
-        <span class="news-tag tag-misc">💼 New Role</span>
+        <span class="news-chip news-chip-misc">💼 New Role</span>
       </article>
 
       <article class="news-card">
@@ -150,7 +148,7 @@ redirect_from:
         <div class="news-card-text">
           Awarded <strong>Ph.D. in Biostatistics</strong> (minor: Health Economics) from UTHealth Houston.
         </div>
-        <span class="news-tag tag-award">🎓 Milestone</span>
+        <span class="news-chip news-chip-award">🎓 Milestone</span>
       </article>
 
       <article class="news-card">
@@ -158,7 +156,7 @@ redirect_from:
         <div class="news-card-text">
           Paper accepted in <em>Biomedical Signal Processing and Control</em>: “Demography-Aware Personalized Federated Learning for Fair, Private, and Efficient Clinical Risk Prediction”.
         </div>
-        <span class="news-tag tag-paper">📄 Paper</span>
+        <span class="news-chip news-chip-paper">📄 Paper</span>
       </article>
 
       <article class="news-card">
@@ -166,7 +164,7 @@ redirect_from:
         <div class="news-card-text">
           Paper accepted in <em>Biomedical Signal Processing and Control</em>: “Pre-attentive Speech Signal Processing with Adaptive Routing for Emotion Recognition”.
         </div>
-        <span class="news-tag tag-paper">📄 Paper</span>
+        <span class="news-chip news-chip-paper">📄 Paper</span>
       </article>
 
       <article class="news-card">
@@ -174,7 +172,7 @@ redirect_from:
         <div class="news-card-text">
           Paper accepted at <strong>IEEE AIxMHC 2025</strong> (Taiwan): “Weighted Federated Learning with Encryption for Diabetes Classification”.
         </div>
-        <span class="news-tag tag-paper">📄 Paper</span>
+        <span class="news-chip news-chip-paper">📄 Paper</span>
       </article>
 
       <article class="news-card">
@@ -182,7 +180,7 @@ redirect_from:
         <div class="news-card-text">
           Paper accepted in <em>The American Journal of Drug and Alcohol Abuse</em>: “Applied Statistical Methods for Identifying Features of Heart Rate Associated with Nicotine Vaping”.
         </div>
-        <span class="news-tag tag-paper">📄 Paper</span>
+        <span class="news-chip news-chip-paper">📄 Paper</span>
       </article>
 
     </div>
@@ -193,287 +191,274 @@ redirect_from:
 
 <style>
   .news-section{
-    margin: 2rem 0;
-  }
-
-  .warm-section-title{
-    display:flex;
-    align-items:center;
-    gap:.55rem;
-    font-size:1.2rem;
-    font-weight:700;
-    color:#6e4f3b;
-    margin-bottom:1rem;
-    letter-spacing:.2px;
+    margin: 0.8em 0 1.6em;
   }
 
   .news-carousel-wrap{
-    position:relative;
-    display:flex;
-    align-items:center;
+    position: relative;
+    display: flex;
+    align-items: center;
   }
 
   .news-carousel{
-    display:flex;
-    gap:18px;
-    overflow-x:auto;
-    scroll-snap-type:x mandatory;
-    scroll-behavior:smooth;
-    -webkit-overflow-scrolling:touch;
-    padding:8px 6px 18px;
-    width:100%;
-    scrollbar-width:none;
-    cursor:grab;
-  }
-
-  .news-carousel:active{
-    cursor:grabbing;
+    display: flex;
+    gap: 16px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    width: 100%;
+    padding: 8px 6px 16px;
+    scrollbar-width: none;
+    cursor: grab;
   }
 
   .news-carousel::-webkit-scrollbar{
-    display:none;
+    display: none;
+  }
+
+  .news-carousel:active{
+    cursor: grabbing;
   }
 
   .news-card{
-    flex:0 0 355px;
-    scroll-snap-align:start;
-    background:linear-gradient(180deg, #fffdfb 0%, #fff8f1 100%);
-    border:1px solid #eadfd2;
-    border-radius:20px;
-    padding:18px 18px 16px;
-    box-shadow:0 8px 24px rgba(93, 67, 42, 0.08);
-    transition:transform .22s ease, box-shadow .22s ease, border-color .22s ease;
-    min-height:200px;
-    display:flex;
-    flex-direction:column;
-    justify-content:space-between;
+    flex: 0 0 340px;
+    scroll-snap-align: start;
+    background: linear-gradient(180deg, #fffdfb 0%, #fff8f2 100%);
+    border: 1px solid #eadfd2;
+    border-radius: 18px;
+    padding: 16px 16px 14px;
+    box-shadow: 0 6px 20px rgba(93, 67, 42, 0.08);
+    transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease, opacity 0.4s ease;
+    min-height: 198px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    opacity: 0;
+  }
+
+  .news-card.visible{
+    opacity: 1;
   }
 
   .news-card:hover{
-    transform:translateY(-4px);
-    box-shadow:0 14px 30px rgba(93, 67, 42, 0.13);
-    border-color:#dcc8b3;
+    transform: translateY(-3px);
+    box-shadow: 0 12px 28px rgba(93, 67, 42, 0.12);
+    border-color: #dcc8b3;
   }
 
   .news-card-date{
-    display:inline-flex;
-    align-items:center;
-    width:fit-content;
-    font-size:.82rem;
-    font-weight:700;
-    color:#9a7a60;
-    background:#f7eee6;
-    border:1px solid #efe1d5;
-    border-radius:999px;
-    padding:5px 11px;
-    margin-bottom:12px;
+    display: inline-flex;
+    align-items: center;
+    width: fit-content;
+    font-size: 0.78em;
+    font-weight: 600;
+    color: #9a7a60;
+    background: #f7eee6;
+    border: 1px solid #efe1d5;
+    border-radius: 999px;
+    padding: 5px 10px;
+    margin-bottom: 12px;
   }
 
   .news-card-text{
-    color:#4d4035;
-    font-size:.98rem;
-    line-height:1.72;
-    margin-bottom:14px;
+    color: #3d342d;
+    font-size: 0.84em;
+    line-height: 1.65;
+    margin-bottom: 14px;
   }
 
   .news-card-text strong{
-    color:#35271f;
+    color: #2f241c;
   }
 
   .news-card-text em{
-    font-style:italic;
-    color:#4a3a31;
+    color: #4a3a31;
+    font-style: italic;
   }
 
-  .news-tag{
-    display:inline-flex;
-    align-items:center;
-    gap:.35rem;
-    width:fit-content;
-    font-size:.78rem;
-    font-weight:700;
-    padding:6px 11px;
-    border-radius:999px;
-    letter-spacing:.15px;
+  .news-chip{
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    width: fit-content;
+    font-size: 0.68em;
+    font-weight: 600;
+    padding: 5px 10px;
+    border-radius: 999px;
+    letter-spacing: 0.12px;
   }
 
-  .tag-talk{
-    background:#fff1e7;
-    color:#b55b2e;
+  .news-chip-paper{
+    background: #edf7ee;
+    color: #2e7d32;
+    border: 1px solid #c8e6c9;
   }
 
-  .tag-paper{
-    background:#edf3ff;
-    color:#3f63b5;
+  .news-chip-talk{
+    background: #e8f1fb;
+    color: #1565c0;
+    border: 1px solid #bbdefb;
   }
 
-  .tag-misc{
-    background:#f3efff;
-    color:#6a52b2;
+  .news-chip-award{
+    background: #fdf6e3;
+    color: #b45309;
+    border: 1px solid #fde68a;
   }
 
-  .tag-award{
-    background:#fff8df;
-    color:#9b7800;
+  .news-chip-misc{
+    background: #f5f5f5;
+    color: #555;
+    border: 1px solid #ddd;
   }
 
   .news-nav{
-    position:absolute;
-    top:50%;
-    transform:translateY(-50%);
-    z-index:3;
-    width:42px;
-    height:42px;
-    border:none;
-    border-radius:50%;
-    background:rgba(255, 250, 245, 0.92);
-    color:#6f533e;
-    box-shadow:0 6px 16px rgba(70, 50, 35, 0.15);
-    font-size:1.9rem;
-    line-height:1;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    cursor:pointer;
-    transition:all .2s ease;
-    backdrop-filter:blur(6px);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 3;
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 50%;
+    background: rgba(255, 250, 245, 0.95);
+    color: #6f533e;
+    box-shadow: 0 6px 16px rgba(70, 50, 35, 0.14);
+    font-size: 1.7rem;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
   }
 
   .news-nav:hover{
-    background:#fff;
-    transform:translateY(-50%) scale(1.06);
+    background: #fff;
+    transform: translateY(-50%) scale(1.05);
   }
 
   .news-nav:disabled{
-    opacity:.32;
-    cursor:not-allowed;
-    transform:translateY(-50%) scale(1);
+    opacity: 0.3;
+    cursor: not-allowed;
+    transform: translateY(-50%);
   }
 
   .news-nav.prev{
-    left:-10px;
+    left: -8px;
   }
 
   .news-nav.next{
-    right:-10px;
+    right: -8px;
   }
 
   .news-carousel-wrap::before,
   .news-carousel-wrap::after{
-    content:"";
-    position:absolute;
-    top:0;
-    bottom:0;
-    width:40px;
-    z-index:2;
-    pointer-events:none;
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 34px;
+    z-index: 2;
+    pointer-events: none;
   }
 
   .news-carousel-wrap::before{
-    left:0;
-    background:linear-gradient(to right, rgba(255,255,255,0.92), rgba(255,255,255,0));
+    left: 0;
+    background: linear-gradient(to right, rgba(255,255,255,0.94), rgba(255,255,255,0));
   }
 
   .news-carousel-wrap::after{
-    right:0;
-    background:linear-gradient(to left, rgba(255,255,255,0.92), rgba(255,255,255,0));
+    right: 0;
+    background: linear-gradient(to left, rgba(255,255,255,0.94), rgba(255,255,255,0));
   }
 
   @media (max-width: 900px){
     .news-card{
-      flex:0 0 300px;
-      min-height:210px;
-    }
-
-    .news-nav.prev{
-      left:-6px;
-    }
-
-    .news-nav.next{
-      right:-6px;
+      flex: 0 0 300px;
+      min-height: 208px;
     }
   }
 
   @media (max-width: 640px){
     .news-card{
-      flex:0 0 86%;
-      min-height:auto;
+      flex: 0 0 86%;
+      min-height: auto;
     }
 
     .news-nav{
-      width:38px;
-      height:38px;
-      font-size:1.6rem;
+      width: 36px;
+      height: 36px;
+      font-size: 1.45rem;
     }
 
     .news-carousel-wrap::before,
     .news-carousel-wrap::after{
-      width:18px;
+      width: 16px;
     }
   }
 </style>
 
 <script>
-  (function () {
-    const carousel = document.getElementById('newsCarousel');
-    const prevBtn = document.getElementById('newsPrev');
-    const nextBtn = document.getElementById('newsNext');
+(function () {
+  const carousel = document.getElementById('newsCarousel');
+  const prevBtn = document.getElementById('newsPrev');
+  const nextBtn = document.getElementById('newsNext');
 
-    function getScrollAmount() {
-      const card = carousel.querySelector('.news-card');
-      if (!card) return 300;
-      const gap = 18;
-      return card.offsetWidth + gap;
-    }
+  if (!carousel || !prevBtn || !nextBtn) return;
 
-    function updateButtons() {
-      const maxScrollLeft = carousel.scrollWidth - carousel.clientWidth;
-      prevBtn.disabled = carousel.scrollLeft <= 5;
-      nextBtn.disabled = carousel.scrollLeft >= maxScrollLeft - 5;
-    }
+  function getScrollAmount() {
+    const card = carousel.querySelector('.news-card');
+    if (!card) return 300;
+    return card.offsetWidth + 16;
+  }
 
-    prevBtn.addEventListener('click', () => {
-      carousel.scrollBy({ left: -getScrollAmount(), behavior: 'smooth' });
-    });
+  function updateButtons() {
+    const maxScrollLeft = carousel.scrollWidth - carousel.clientWidth;
+    prevBtn.disabled = carousel.scrollLeft <= 5;
+    nextBtn.disabled = carousel.scrollLeft >= maxScrollLeft - 5;
+  }
 
-    nextBtn.addEventListener('click', () => {
-      carousel.scrollBy({ left: getScrollAmount(), behavior: 'smooth' });
-    });
+  prevBtn.addEventListener('click', () => {
+    carousel.scrollBy({ left: -getScrollAmount(), behavior: 'smooth' });
+  });
 
-    carousel.addEventListener('scroll', updateButtons);
-    window.addEventListener('resize', updateButtons);
+  nextBtn.addEventListener('click', () => {
+    carousel.scrollBy({ left: getScrollAmount(), behavior: 'smooth' });
+  });
 
-    let isDown = false;
-    let startX;
-    let scrollLeft;
+  carousel.addEventListener('scroll', updateButtons);
+  window.addEventListener('resize', updateButtons);
 
-    carousel.addEventListener('mousedown', (e) => {
-      isDown = true;
-      carousel.classList.add('dragging');
-      startX = e.pageX - carousel.offsetLeft;
-      scrollLeft = carousel.scrollLeft;
-    });
+  let isDown = false;
+  let startX = 0;
+  let scrollLeft = 0;
 
-    carousel.addEventListener('mouseleave', () => {
-      isDown = false;
-      carousel.classList.remove('dragging');
-    });
+  carousel.addEventListener('mousedown', (e) => {
+    isDown = true;
+    startX = e.pageX - carousel.offsetLeft;
+    scrollLeft = carousel.scrollLeft;
+  });
 
-    carousel.addEventListener('mouseup', () => {
-      isDown = false;
-      carousel.classList.remove('dragging');
-    });
+  carousel.addEventListener('mouseleave', () => {
+    isDown = false;
+  });
 
-    carousel.addEventListener('mousemove', (e) => {
-      if (!isDown) return;
-      e.preventDefault();
-      const x = e.pageX - carousel.offsetLeft;
-      const walk = (x - startX) * 1.2;
-      carousel.scrollLeft = scrollLeft - walk;
-    });
+  carousel.addEventListener('mouseup', () => {
+    isDown = false;
+  });
 
-    updateButtons();
-  })();
+  carousel.addEventListener('mousemove', (e) => {
+    if (!isDown) return;
+    e.preventDefault();
+    const x = e.pageX - carousel.offsetLeft;
+    const walk = (x - startX) * 1.15;
+    carousel.scrollLeft = scrollLeft - walk;
+  });
+
+  updateButtons();
+})();
 </script>
 <div class="warm-section-title"><span>§</span> Education</div>
 <div class="edu-timeline">
@@ -644,7 +629,7 @@ redirect_from:
   }, {threshold: 0.1, rootMargin: '0px 0px -30px 0px'});
 
   function init(){
-    document.querySelectorAll('.r-card, .edu-item, .pub-card, .news-item').forEach(function(el){
+    document.querySelectorAll('.r-card, .edu-item, .pub-card, .news-card').forEach(function(el){
       observer.observe(el);
     });
   }
