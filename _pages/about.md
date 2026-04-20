@@ -13,20 +13,16 @@ redirect_from:
 
 .page__content { font-family: 'Inter', sans-serif; font-size: 0.92em; color: #2d2d2d; }
 
-/* Hero */
 .hero-banner { border-left: 3px solid #c0613a; padding: 1.1em 1.4em; margin-bottom: 1.8em; background: #fafafa; }
 .hero-greeting { font-family: 'Lora', serif; font-size: 1.45em; font-weight: 600; color: #1a1a1a; margin: 0 0 0.45em 0; }
-.hero-greeting span { color: #c0613a; }
 .hero-pills { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 0.9em; }
 .hero-pill { font-size: 0.75em; color: #555; background: #f0f0f0; border-radius: 3px; padding: 2px 8px; }
 .hero-bio { font-size: 0.88em; line-height: 1.75; color: #333; margin: 0; }
 .hero-bio strong { color: #c0613a; font-weight: 600; }
 
-/* Section titles */
 .warm-section-title { font-family: 'Lora', serif; font-size: 1.0em; font-weight: 600; color: #1a1a1a; margin: 1.8em 0 0.7em 0; padding-bottom: 0.3em; border-bottom: 1.5px solid #e8e8e8; display: block; letter-spacing: 0.01em; }
 .warm-section-title span { color: #c0613a; margin-right: 6px; }
 
-/* Research interests */
 .research-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 8px; margin-bottom: 0.5em; }
 .r-card { background: #fff; border-radius: 4px; padding: 10px 12px; border: 1px solid #e8e8e8; transition: border-color 0.2s, opacity 0.4s ease; opacity: 0; }
 .r-card.visible { opacity: 1; }
@@ -35,7 +31,6 @@ redirect_from:
 .r-card-title { font-weight: 600; font-size: 0.8em; color: #1a1a1a; margin-bottom: 3px; }
 .r-card-desc { font-size: 0.76em; color: #666; line-height: 1.55; }
 
-/* Education */
 .edu-timeline { margin: 0.4em 0 1em; }
 .edu-item { display: grid; grid-template-columns: 90px 1fr; gap: 12px; padding: 7px 0; border-bottom: 1px solid #f0f0f0; opacity: 0; transition: opacity 0.4s ease; }
 .edu-item.visible { opacity: 1; }
@@ -45,24 +40,24 @@ redirect_from:
 .edu-school { color: #444; font-size: 0.8em; margin: 1px 0 0 0; }
 .edu-advisor { color: #888; font-size: 0.75em; font-style: italic; margin: 1px 0 0 0; }
 
-/* Publications */
 .pub-tabs { display: flex; gap: 6px; margin-bottom: 0.9em; flex-wrap: wrap; }
 .pub-tab { padding: 3px 12px; border-radius: 3px; border: 1px solid #ddd; background: transparent; font-family: 'Inter', sans-serif; font-size: 0.76em; font-weight: 500; color: #666; cursor: pointer; transition: all 0.15s ease; }
 .pub-tab.active, .pub-tab:hover { background: #c0613a; border-color: #c0613a; color: white; }
-.pub-card { padding: 9px 0; margin-bottom: 0; border-bottom: 1px solid #f0f0f0; display: grid; grid-template-columns: 36px 1fr auto; gap: 10px; align-items: start; transition: opacity 0.4s ease; opacity: 0; }
-.pub-card.visible { opacity: 1; }
-.pub-card:last-child { border-bottom: none; }
-.pub-yr { font-size: 0.7em; font-weight: 600; color: #c0613a; text-align: center; padding-top: 2px; }
-.pub-t { font-weight: 500; font-size: 0.84em; color: #1a1a1a; margin: 0 0 3px 0; line-height: 1.4; }
-.pub-a { font-size: 0.76em; color: #666; margin: 0 0 2px 0; }
-.pub-a b { color: #333; font-weight: 600; }
-.pub-v { font-size: 0.74em; color: #999; font-style: italic; margin: 0; }
-.pub-badge { font-size: 0.63em; font-weight: 600; padding: 2px 7px; border-radius: 3px; white-space: nowrap; align-self: flex-start; margin-top: 2px; }
-.bj { background: #edf7ee; color: #2e7d32; border: 1px solid #c8e6c9; }
-.bc { background: #e8f1fb; color: #1565c0; border: 1px solid #bbdefb; }
-.bb { background: #fdf6e3; color: #b45309; border: 1px solid #fde68a; }
 
-/* Contact */
+#pubContainer { display: flex; flex-direction: column; gap: 10px; margin-top: 12px; }
+.pub-card { display: grid; grid-template-columns: 52px 1fr auto; gap: 12px; align-items: start; padding: 12px 14px; border: 1px solid #e8e8e8; border-radius: 10px; background: #fff; transition: opacity 0.4s ease; opacity: 0; }
+.pub-card.visible { opacity: 1; }
+.pub-card:hover { border-color: #c0613a; }
+.pub-yr { font-size: 0.75em; font-weight: 700; color: #c0613a; padding-top: 2px; }
+.pub-t { margin: 0 0 5px 0; font-size: 0.86em; font-weight: 600; line-height: 1.4; color: #1a1a1a; }
+.pub-a { margin: 0 0 3px 0; font-size: 0.78em; color: #555; }
+.pub-a b { color: #1a1a1a; font-weight: 600; }
+.pub-v { margin: 0; font-size: 0.76em; color: #888; font-style: italic; }
+.pub-badge { align-self: start; font-size: 0.68em; font-weight: 700; padding: 3px 10px; border-radius: 999px; white-space: nowrap; }
+.bj { background: #eaf2ff; color: #1d4ed8; }
+.bc { background: #ecfdf5; color: #047857; }
+.bb { background: #fff7ed; color: #c2410c; }
+
 .contact-box { background: #fafafa; border: 1px solid #e8e8e8; border-left: 3px solid #c0613a; padding: 1.1em 1.4em; margin-top: 0.5em; }
 .contact-tagline { font-family: 'Lora', serif; font-size: 0.9em; color: #444; margin: 0 0 0.8em 0; font-style: italic; }
 .contact-email-btn { display: inline-flex; align-items: center; gap: 6px; background: #c0613a; color: white; padding: 6px 16px; border-radius: 3px; font-size: 0.8em; font-weight: 500; text-decoration: none; transition: background 0.2s; }
@@ -71,79 +66,23 @@ redirect_from:
 .s-link { display: inline-flex; align-items: center; gap: 4px; padding: 4px 10px; border-radius: 3px; border: 1px solid #ddd; background: white; font-size: 0.74em; font-weight: 500; color: #555; text-decoration: none; transition: all 0.15s ease; }
 .s-link:hover { background: #c0613a; color: white; border-color: #c0613a; text-decoration: none; }
 
-/* Photo strip */
 .photo-strip { display: flex; gap: 8px; overflow-x: auto; margin: 1.2em 0 0.4em; padding-bottom: 4px; }
 .photo-strip img { height: 58px; border-radius: 4px; object-fit: cover; flex-shrink: 0; border: 1px solid #e8e8e8; transition: opacity 0.2s; }
 .photo-strip img:hover { opacity: 0.85; }
-/* News */
-.news-list {
-  list-style: none;
-  margin: 0.4em 0 1em;
-  padding: 0;
-}
 
-.news-item {
-  display: grid;
-  grid-template-columns: 95px 1fr;
-  gap: 12px;
-  padding: 8px 0;
-  border-bottom: 1px solid #f0f0f0;
-  opacity: 0;
-  transition: opacity 0.4s ease;
-}
+.news-list { list-style: none; padding: 0; margin: 0.4em 0 1em; }
+.news-item { display: grid; grid-template-columns: 95px 1fr; gap: 12px; padding: 8px 0; border-bottom: 1px solid #f0f0f0; opacity: 0; transition: opacity 0.4s ease; }
+.news-item.visible { opacity: 1; }
+.news-item:last-child { border-bottom: none; }
+.news-date { font-size: 0.75em; font-weight: 600; color: #c0613a; padding-top: 2px; white-space: nowrap; }
+.news-text { margin: 0; font-size: 0.82em; line-height: 1.65; color: #333; }
+.news-tag { display: inline-block; margin-left: 8px; font-size: 0.68em; font-weight: 600; padding: 2px 8px; border-radius: 999px; vertical-align: middle; }
+.tag-paper { background: #eaf2ff; color: #1d4ed8; }
+.tag-talk { background: #ecfdf5; color: #047857; }
+.tag-award { background: #fff7ed; color: #c2410c; }
+.tag-misc { background: #f3f4f6; color: #4b5563; }
+</style>
 
-.news-item.visible {
-  opacity: 1;
-}
-
-.news-item:last-child {
-  border-bottom: none;
-}
-
-.news-date {
-  font-size: 0.75em;
-  font-weight: 600;
-  color: #c0613a;
-  padding-top: 2px;
-  white-space: nowrap;
-}
-
-.news-text {
-  margin: 0;
-  font-size: 0.82em;
-  line-height: 1.65;
-  color: #333;
-}
-
-.news-tag {
-  display: inline-block;
-  margin-left: 8px;
-  font-size: 0.68em;
-  font-weight: 600;
-  padding: 2px 8px;
-  border-radius: 999px;
-  vertical-align: middle;
-}
-
-.tag-paper {
-  background: #eaf2ff;
-  color: #1d4ed8;
-}
-
-.tag-talk {
-  background: #ecfdf5;
-  color: #047857;
-}
-
-.tag-award {
-  background: #fff7ed;
-  color: #c2410c;
-}
-
-.tag-misc {
-  background: #f3f4f6;
-  color: #4b5563;
-}
 <div class="hero-banner">
 <div class="hero-greeting">Puyang Zhao</div>
 <div class="hero-pills">
@@ -155,81 +94,27 @@ redirect_from:
 </div>
 
 <div class="warm-section-title"><span>§</span> News</div>
-
 <ul class="news-list" id="newsList">
-  <li class="news-item">
-    <span class="news-date">Apr 23, 2026</span>
-    <p class="news-text">
-      Invited to present at <strong>CAPE Day 2026</strong> (Texas Children's Hospital, April 23) on the Poverty Simulator intervention in health professions education.
-      <span class="news-tag tag-talk">🎤 Talk</span>
-    </p>
-  </li>
-
-  <li class="news-item">
-    <span class="news-date">Apr 8, 2026</span>
-    <p class="news-text">
-      Paper accepted at <strong>IEEE EIT 2026</strong>: “Comparative Analysis of Shallow and Deep Learning Methods for Diabetes Prediction Using the Pima Indians Dataset”.
-      <span class="news-tag tag-paper">📄 Paper</span>
-    </p>
-  </li>
-
-  <li class="news-item">
-    <span class="news-date">Mar 15, 2026</span>
-    <p class="news-text">
-      Oral presentation accepted at the <strong>30th Annual Conference of the International Association</strong>: “Promoting Structural Awareness and Empathy: Evaluation of a Poverty Simulation Intervention in Health Professions Education”.
-      <span class="news-tag tag-talk">🎤 Talk</span>
-    </p>
-  </li>
-
-  <li class="news-item">
-    <span class="news-date">Feb 9, 2026</span>
-    <p class="news-text">
-      Joined <strong>Rice University</strong> as a Postdoctoral Associate in Computer Science, working with Dr. Hanjie Chen.
-      <span class="news-tag tag-misc">💼 New Role</span>
-    </p>
-  </li>
-
-  <li class="news-item">
-    <span class="news-date">Dec 12, 2025</span>
-    <p class="news-text">
-      Awarded <strong>Ph.D. in Biostatistics</strong> (minor: Health Economics) from UTHealth Houston.
-      <span class="news-tag tag-award">🎓 Milestone</span>
-    </p>
-  </li>
-
-  <li class="news-item">
-    <span class="news-date">Nov 29, 2025</span>
-    <p class="news-text">
-      Paper accepted in <em>Biomedical Signal Processing and Control</em>: “Demography-Aware Personalized Federated Learning for Fair, Private, and Efficient Clinical Risk Prediction”.
-      <span class="news-tag tag-paper">📄 Paper</span>
-    </p>
-  </li>
-
-  <li class="news-item">
-    <span class="news-date">Oct 1, 2025</span>
-    <p class="news-text">
-      Paper accepted in <em>Biomedical Signal Processing and Control</em>: “Pre-attentive Speech Signal Processing with Adaptive Routing for Emotion Recognition”.
-      <span class="news-tag tag-paper">📄 Paper</span>
-    </p>
-  </li>
-
-  <li class="news-item">
-    <span class="news-date">Jul 11, 2025</span>
-    <p class="news-text">
-      Paper accepted at <strong>IEEE AIxMHC 2025</strong> (Taiwan): “Weighted Federated Learning with Encryption for Diabetes Classification”.
-      <span class="news-tag tag-paper">📄 Paper</span>
-    </p>
-  </li>
-
-  <li class="news-item">
-    <span class="news-date">Dec 10, 2024</span>
-    <p class="news-text">
-      Paper accepted in <em>The American Journal of Drug and Alcohol Abuse</em>: “Applied Statistical Methods for Identifying Features of Heart Rate Associated with Nicotine Vaping”.
-      <span class="news-tag tag-paper">📄 Paper</span>
-    </p>
-  </li>
+<li class="news-item"><span class="news-date">Apr 23, 2026</span><p class="news-text">Invited to present at <strong>CAPE Day 2026</strong> (Texas Children's Hospital, April 23) on the Poverty Simulator intervention in health professions education.<span class="news-tag tag-talk">🎤 Talk</span></p></li>
+<li class="news-item"><span class="news-date">Apr 8, 2026</span><p class="news-text">Paper accepted at <strong>IEEE EIT 2026</strong>: "Comparative Analysis of Shallow and Deep Learning Methods for Diabetes Prediction Using the Pima Indians Dataset".<span class="news-tag tag-paper">📄 Paper</span></p></li>
+<li class="news-item"><span class="news-date">Mar 15, 2026</span><p class="news-text">Oral presentation accepted at the <strong>30th Annual Conference of the International Association</strong>: "Promoting Structural Awareness and Empathy: Evaluation of a Poverty Simulation Intervention in Health Professions Education".<span class="news-tag tag-talk">🎤 Talk</span></p></li>
+<li class="news-item"><span class="news-date">Feb 9, 2026</span><p class="news-text">Joined <strong>Rice University</strong> as a Postdoctoral Associate in Computer Science, working with Dr. Hanjie Chen.<span class="news-tag tag-misc">💼 New Role</span></p></li>
+<li class="news-item"><span class="news-date">Dec 12, 2025</span><p class="news-text">Awarded <strong>Ph.D. in Biostatistics</strong> (minor: Health Economics) from UTHealth Houston.<span class="news-tag tag-award">🎓 Milestone</span></p></li>
+<li class="news-item"><span class="news-date">Nov 29, 2025</span><p class="news-text">Paper accepted in <em>Biomedical Signal Processing and Control</em>: "Demography-Aware Personalized Federated Learning for Fair, Private, and Efficient Clinical Risk Prediction".<span class="news-tag tag-paper">📄 Paper</span></p></li>
+<li class="news-item"><span class="news-date">Oct 1, 2025</span><p class="news-text">Paper accepted in <em>Biomedical Signal Processing and Control</em>: "Pre-attentive Speech Signal Processing with Adaptive Routing for Emotion Recognition".<span class="news-tag tag-paper">📄 Paper</span></p></li>
+<li class="news-item"><span class="news-date">Jul 11, 2025</span><p class="news-text">Paper accepted at <strong>IEEE AIxMHC 2025</strong> (Taiwan): "Weighted Federated Learning with Encryption for Diabetes Classification".<span class="news-tag tag-paper">📄 Paper</span></p></li>
+<li class="news-item"><span class="news-date">Dec 10, 2024</span><p class="news-text">Paper accepted in <em>The American Journal of Drug and Alcohol Abuse</em>: "Applied Statistical Methods for Identifying Features of Heart Rate Associated with Nicotine Vaping".<span class="news-tag tag-paper">📄 Paper</span></p></li>
 </ul>
 
+<div class="warm-section-title"><span>§</span> Research Interests</div>
+<div class="research-grid">
+<div class="r-card"><span class="r-card-icon">⌚</span><div class="r-card-title">Wearable Devices</div><div class="r-card-desc">Physiological signal analysis, heart rate monitoring in relation to nicotine vaping events.</div></div>
+<div class="r-card"><span class="r-card-icon">🗣</span><div class="r-card-title">Speech Emotion Recognition</div><div class="r-card-desc">Capsule networks and fusion models for robust emotion recognition in clinical settings.</div></div>
+<div class="r-card"><span class="r-card-icon">📊</span><div class="r-card-title">Longitudinal &amp; EMA Data</div><div class="r-card-desc">Statistical methods for ecological momentary assessment in behavioral health research.</div></div>
+<div class="r-card"><span class="r-card-icon">🩺</span><div class="r-card-title">Clinical Machine Learning</div><div class="r-card-desc">GAN-based methods, federated learning, and deep learning for diabetes classification.</div></div>
+<div class="r-card"><span class="r-card-icon">🌿</span><div class="r-card-title">Environmental Modeling</div><div class="r-card-desc">dPL-SPARROW framework combining neural networks with watershed models.</div></div>
+<div class="r-card"><span class="r-card-icon">🚬</span><div class="r-card-title">Tobacco &amp; E-cigarette</div><div class="r-card-desc">Vaping behavior patterns and tobacco control in public health research.</div></div>
+</div>
 
 <div class="warm-section-title"><span>§</span> Education</div>
 <div class="edu-timeline">
@@ -245,105 +130,6 @@ redirect_from:
 <button class="pub-tab" onclick="filterPubs('j',this)">Journal Articles</button>
 <button class="pub-tab" onclick="filterPubs('c',this)">Conference</button>
 </div>
-<style>
-  #pubContainer{
-    display:flex;
-    flex-direction:column;
-    gap:14px;
-    margin-top:12px;
-    font-family: "Inter", "Segoe UI", Arial, sans-serif;
-  }
-
-  .pub-card{
-    display:grid;
-    grid-template-columns:90px 1fr auto;
-    gap:16px;
-    align-items:start;
-    padding:16px 18px;
-    border:1px solid #e8e8e8;
-    border-radius:16px;
-    background:#fff;
-    box-shadow:0 2px 10px rgba(0,0,0,0.04);
-    transition:transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
-  }
-
-  .pub-card:hover{
-    transform:translateY(-2px);
-    box-shadow:0 8px 22px rgba(0,0,0,0.08);
-    border-color:#d8d8d8;
-  }
-
-  .pub-yr{
-    font-size:0.95rem;
-    font-weight:700;
-    color:#4b5563;
-    white-space:nowrap;
-    padding-top:2px;
-  }
-
-  .pub-t{
-    margin:0 0 8px 0;
-    font-size:1.02rem;
-    font-weight:700;
-    line-height:1.45;
-    color:#111827;
-  }
-
-  .pub-a{
-    margin:0 0 6px 0;
-    font-size:0.95rem;
-    line-height:1.5;
-    color:#374151;
-  }
-
-  .pub-v{
-    margin:0;
-    font-size:0.92rem;
-    line-height:1.5;
-    color:#6b7280;
-    font-style:italic;
-  }
-
-  .pub-badge{
-    align-self:start;
-    display:inline-flex;
-    align-items:center;
-    gap:6px;
-    font-size:0.82rem;
-    font-weight:700;
-    padding:7px 12px;
-    border-radius:999px;
-    white-space:nowrap;
-    letter-spacing:0.2px;
-  }
-
-  .bj{
-    background:#eaf2ff;
-    color:#1d4ed8;
-  }
-
-  .bc{
-    background:#ecfdf5;
-    color:#047857;
-  }
-
-  .bb{
-    background:#fff7ed;
-    color:#c2410c;
-  }
-
-  @media (max-width: 760px){
-    .pub-card{
-      grid-template-columns:1fr;
-      gap:10px;
-    }
-
-    .pub-badge{
-      justify-self:start;
-    }
-  }
-</style>
-
 <div id="pubContainer">
 <div class="pub-card" data-type="j"><div class="pub-yr">2026</div><div><p class="pub-t">Demography-Aware Personalized Federated Learning for Fair, Private, and Efficient Clinical Risk Prediction</p><p class="pub-a"><b>Zhao P.</b>, Yue Z., Mi N., Zhang H.</p><p class="pub-v">Biomedical Signal Processing and Control 114, 109312</p></div><span class="pub-badge bj">Journal</span></div>
 <div class="pub-card" data-type="j"><div class="pub-yr">2026</div><div><p class="pub-t">Pre-attentive Speech Signal Processing with Adaptive Routing for Emotion Recognition</p><p class="pub-a">Zhang H., Pang Z., <b>Zhao P.</b>, Tang G., Shen L., Wang G.</p><p class="pub-v">Biomedical Signal Processing and Control 112, 108782</p></div><span class="pub-badge bj">Journal</span></div>
