@@ -75,7 +75,75 @@ redirect_from:
 .photo-strip { display: flex; gap: 8px; overflow-x: auto; margin: 1.2em 0 0.4em; padding-bottom: 4px; }
 .photo-strip img { height: 58px; border-radius: 4px; object-fit: cover; flex-shrink: 0; border: 1px solid #e8e8e8; transition: opacity 0.2s; }
 .photo-strip img:hover { opacity: 0.85; }
+/* News */
+.news-list {
+  list-style: none;
+  margin: 0.4em 0 1em;
+  padding: 0;
+}
 
+.news-item {
+  display: grid;
+  grid-template-columns: 95px 1fr;
+  gap: 12px;
+  padding: 8px 0;
+  border-bottom: 1px solid #f0f0f0;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.news-item.visible {
+  opacity: 1;
+}
+
+.news-item:last-child {
+  border-bottom: none;
+}
+
+.news-date {
+  font-size: 0.75em;
+  font-weight: 600;
+  color: #c0613a;
+  padding-top: 2px;
+  white-space: nowrap;
+}
+
+.news-text {
+  margin: 0;
+  font-size: 0.82em;
+  line-height: 1.65;
+  color: #333;
+}
+
+.news-tag {
+  display: inline-block;
+  margin-left: 8px;
+  font-size: 0.68em;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 999px;
+  vertical-align: middle;
+}
+
+.tag-paper {
+  background: #eaf2ff;
+  color: #1d4ed8;
+}
+
+.tag-talk {
+  background: #ecfdf5;
+  color: #047857;
+}
+
+.tag-award {
+  background: #fff7ed;
+  color: #c2410c;
+}
+
+.tag-misc {
+  background: #f3f4f6;
+  color: #4b5563;
+}
 <div class="hero-banner">
 <div class="hero-greeting">Puyang Zhao</div>
 <div class="hero-pills">
