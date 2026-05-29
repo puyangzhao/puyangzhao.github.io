@@ -95,6 +95,8 @@ redirect_from:
 
 <div class="warm-section-title"><span>§</span> News</div>
 <ul class="news-list" id="newsList">
+<li class="news-item"><span class="news-date">May 28, 2026</span><p class="news-text">Presentation accepted at the <strong>25th Annual Hawaii International Conference on Education</strong>: "Promoting Structural Awareness and Social Needs Preparedness Through Poverty Simulation in Health Professions Education".<span class="news-tag tag-talk">🎤 Talk</span></p></li>
+<li class="news-item"><span class="news-date">Apr 2026</span><p class="news-text">Paper accepted in <em>Biomedical Signal Processing and Control</em>: "Saliency-Driven Neural Network for Generalizable Speech Emotion Recognition" (co-author).<span class="news-tag tag-paper">📄 Paper</span></p></li>
 <li class="news-item"><span class="news-date">Apr 23, 2026</span><p class="news-text">Invited to present at <strong>CAPE Day 2026</strong> (Texas Children's Hospital, April 23) on the Poverty Simulator intervention in health professions education.<span class="news-tag tag-talk">🎤 Talk</span></p></li>
 <li class="news-item"><span class="news-date">Apr 8, 2026</span><p class="news-text">Paper accepted at <strong>IEEE EIT 2026</strong>: "Comparative Analysis of Shallow and Deep Learning Methods for Diabetes Prediction Using the Pima Indians Dataset".<span class="news-tag tag-paper">📄 Paper</span></p></li>
 <li class="news-item"><span class="news-date">Mar 15, 2026</span><p class="news-text">Oral presentation accepted at the <strong>30th Annual Conference of the International Association</strong>: "Promoting Structural Awareness and Empathy: Evaluation of a Poverty Simulation Intervention in Health Professions Education".<span class="news-tag tag-talk">🎤 Talk</span></p></li>
