@@ -95,21 +95,37 @@ redirect_from:
 
 <div class="warm-section-title"><span>§</span> News</div>
 <ul class="news-list" id="newsList">
+
 <li class="news-item"><span class="news-date">May 28, 2026</span><p class="news-text">Presentation accepted at the <strong>25th Annual Hawaii International Conference on Education</strong>: "Promoting Structural Awareness and Social Needs Preparedness Through Poverty Simulation in Health Professions Education".<span class="news-tag tag-talk">🎤 Talk</span></p></li>
-<li class="news-item"><span class="news-date">Apr 2026</span><p class="news-text">Paper accepted in <em>Biomedical Signal Processing and Control</em>: "Saliency-Driven Neural Network for Generalizable Speech Emotion Recognition" (co-author).<span class="news-tag tag-paper">📄 Paper</span></p></li>
-<li class="news-item"><span class="news-date">Apr 23, 2026</span><p class="news-text">Invited to present at <strong>CAPE Day 2026</strong> (Texas Children's Hospital, April 23) on the Poverty Simulator intervention in health professions education.<span class="news-tag tag-talk">🎤 Talk</span></p></li>
+
+<li class="news-item"><span class="news-date">Apr 2026</span><p class="news-text">Co-authored paper accepted in <em>Biomedical Signal Processing and Control</em>: "Saliency-Driven Neural Network for Generalizable Speech Emotion Recognition".<span class="news-tag tag-paper">📄 Paper</span></p></li>
+
+<li class="news-item"><span class="news-date">Apr 23, 2026</span><p class="news-text">Invited to present at <strong>CAPE Day 2026</strong> at Texas Children's Hospital on the poverty simulation intervention in health professions education.<span class="news-tag tag-talk">🎤 Talk</span></p></li>
+
 <li class="news-item"><span class="news-date">Apr 8, 2026</span><p class="news-text">Paper accepted at <strong>IEEE EIT 2026</strong>: "Comparative Analysis of Shallow and Deep Learning Methods for Diabetes Prediction Using the Pima Indians Dataset".<span class="news-tag tag-paper">📄 Paper</span></p></li>
+
 <li class="news-item"><span class="news-date">Mar 15, 2026</span><p class="news-text">Oral presentation accepted at the <strong>30th Annual Conference of the International Association</strong>: "Promoting Structural Awareness and Empathy: Evaluation of a Poverty Simulation Intervention in Health Professions Education".<span class="news-tag tag-talk">🎤 Talk</span></p></li>
+
 <li class="news-item"><span class="news-date">Feb 9, 2026</span><p class="news-text">Joined <strong>Rice University</strong> as a Postdoctoral Associate in Computer Science, working with Dr. Hanjie Chen.<span class="news-tag tag-misc">💼 New Role</span></p></li>
-<li class="news-item"><span class="news-date">Dec 12, 2025</span><p class="news-text">Awarded <strong>Ph.D. in Biostatistics</strong> (minor: Health Economics) from UTHealth Houston.<span class="news-tag tag-award">🎓 Milestone</span></p></li>
+
+<li class="news-item"><span class="news-date">Dec 12, 2025</span><p class="news-text">Awarded <strong>Ph.D. in Biostatistics</strong> with a minor in Health Economics from UTHealth Houston.<span class="news-tag tag-award">🎓 Milestone</span></p></li>
+
 <li class="news-item"><span class="news-date">Nov 29, 2025</span><p class="news-text">Paper accepted in <em>Biomedical Signal Processing and Control</em>: "Demography-Aware Personalized Federated Learning for Fair, Private, and Efficient Clinical Risk Prediction".<span class="news-tag tag-paper">📄 Paper</span></p></li>
+
+<li class="news-item"><span class="news-date">Oct 1, 2025</span><p class="news-text">Co-authored paper accepted in <em>Biomedical Signal Processing and Control</em>: "Pre-attentive Speech Signal Processing with Adaptive Routing for Emotion Recognition".<span class="news-tag tag-paper">📄 Paper</span></p></li>
+
+<li class="news-item"><span class="news-date">Jul 11, 2025</span><p class="news-text">Paper accepted at <strong>IEEE AIxMHC 2025</strong> in Taiwan: "Weighted Federated Learning with Encryption for Diabetes Classification".<span class="news-tag tag-paper">📄 Paper</span></p></li>
+
 <li class="news-item"><span class="news-date">2025</span><p class="news-text">Co-authored paper published in <em>Biomedical Signal Processing and Control</em>: "Reproducible and Generalizable Speech Emotion Recognition via an Intelligent Fusion Network".<span class="news-tag tag-paper">📄 Paper</span></p></li>
-<li class="news-item"><span class="news-date">Oct 1, 2025</span><p class="news-text">Paper accepted in <em>Biomedical Signal Processing and Control</em>: "Pre-attentive Speech Signal Processing with Adaptive Routing for Emotion Recognition".<span class="news-tag tag-paper">📄 Paper</span></p></li>
+
 <li class="news-item"><span class="news-date">2025</span><p class="news-text">Co-authored paper published in <em>Engineering Applications of Artificial Intelligence</em>: "Sparse Temporal Aware Capsule Network for Robust Speech Emotion Recognition".<span class="news-tag tag-paper">📄 Paper</span></p></li>
-<li class="news-item"><span class="news-date">Jul 11, 2025</span><p class="news-text">Paper accepted at <strong>IEEE AIxMHC 2025</strong> (Taiwan): "Weighted Federated Learning with Encryption for Diabetes Classification".<span class="news-tag tag-paper">📄 Paper</span></p></li>
+
 <li class="news-item"><span class="news-date">Dec 10, 2024</span><p class="news-text">Paper accepted in <em>The American Journal of Drug and Alcohol Abuse</em>: "Applied Statistical Methods for Identifying Features of Heart Rate Associated with Nicotine Vaping".<span class="news-tag tag-paper">📄 Paper</span></p></li>
+
 <li class="news-item"><span class="news-date">2024</span><p class="news-text">Paper published in <em>Computer Methods and Programs in Biomedicine Update</em>: "DiGAN Breakthrough: Advancing Diabetic Data Analysis with Innovative GAN-Based Imbalance Correction Techniques".<span class="news-tag tag-paper">📄 Paper</span></p></li>
+
 <li class="news-item"><span class="news-date">2024</span><p class="news-text">Co-authored paper published in <em>Knowledge-Based Systems</em>: "CENN: Capsule-Enhanced Neural Network with Innovative Metrics for Robust Speech Emotion Recognition".<span class="news-tag tag-paper">📄 Paper</span></p></li>
+
 </ul>
 
 <div class="warm-section-title"><span>§</span> Research Interests</div>
