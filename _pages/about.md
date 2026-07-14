@@ -95,6 +95,15 @@ redirect_from:
 
 <div class="warm-section-title"><span>§</span> News</div>
 <ul class="news-list" id="newsList">
+<li class="news-item">
+  <span class="news-date">Jun 4, 2026</span>
+  <p class="news-text">
+    First-authored paper published in <em>Applied Soft Computing</em>: 
+    "Residual Attention Network for Audio-Based Speech Emotion Recognition".
+    <span class="news-tag tag-paper">📄 Paper</span>
+  </p>
+</li>
+
 
 <li class="news-item"><span class="news-date">May 28, 2026</span><p class="news-text">Presentation accepted at the <strong>25th Annual Hawaii International Conference on Education</strong>: "Promoting Structural Awareness and Social Needs Preparedness Through Poverty Simulation in Health Professions Education".<span class="news-tag tag-talk">🎤 Talk</span></p></li>
 
